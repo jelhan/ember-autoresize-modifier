@@ -19,5 +19,5 @@ export default modifier(function autoresize(element) {
   return () => {
     // clean up
     element.removeEventListener('input', eventHandler);
-  }
+  };
 });

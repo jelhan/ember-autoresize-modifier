@@ -13,7 +13,7 @@ module('Integration | Modifier | autoresize', function(hooks) {
     for (let i = 0; i < 100; i++) {
       longString += 'ab cd ef gh ij kl mn op qr st uv wx yz.';
       if (i % 6 === 0) {
-        longString += "\n";
+        longString += '\n';
       }
     }
   });
@@ -25,8 +25,8 @@ module('Integration | Modifier | autoresize', function(hooks) {
           let element = find(selector);
           let result = element.clientHeight === element.scrollHeight;
           assert.ok(result, message);
-        }
-      }
+        },
+      };
     };
   });
 
@@ -47,7 +47,9 @@ module('Integration | Modifier | autoresize', function(hooks) {
 
     await fillIn(element, longString);
     assert.ok(heightBefore < element.clientHeight, 'textarea grows on input of long string');
-    assert.extendedDom(element).doesNotOverflow('textarea does not overflow after input of long string');
+    assert
+      .extendedDom(element)
+      .doesNotOverflow('textarea does not overflow after input of long string');
   });
 
   test('it shrinks textarea on input to fit value', async function(assert) {
@@ -62,7 +64,9 @@ module('Integration | Modifier | autoresize', function(hooks) {
 
     await fillIn(element, '');
     assert.ok(heightBefore > element.clientHeight, 'textarea shrinks on input of shorter string');
-    assert.extendedDom(element).doesNotOverflow('textarea does not overflow after input of shorter string');
+    assert
+      .extendedDom(element)
+      .doesNotOverflow('textarea does not overflow after input of shorter string');
   });
 
   test('it resizes if value changes programmatically', async function(assert) {
@@ -75,6 +79,8 @@ module('Integration | Modifier | autoresize', function(hooks) {
 
     this.set('value', longString);
     assert.ok(heightBefore < element.clientHeight, 'textarea resizes on programmatic change');
-    assert.extendedDom(element).doesNotOverflow('textarea does not overflow after programmatic change');
+    assert
+      .extendedDom(element)
+      .doesNotOverflow('textarea does not overflow after programmatic change');
   });
 });
