@@ -34,7 +34,7 @@ module('Integration | Modifier | autoresize', function(hooks) {
     this.set('value', longString);
 
     await render(hbs`<textarea value={{this.value}} {{autoresize}} />`);
-    assert.extendedDom('textarea').doesNotOverflow('textarea does not overflow before input');
+    assert.extendedDom('textarea').doesNotOverflow();
   });
 
   test('it grows textarea on input to fit value', async function(assert) {
@@ -82,5 +82,14 @@ module('Integration | Modifier | autoresize', function(hooks) {
     assert
       .extendedDom(element)
       .doesNotOverflow('textarea does not overflow after programmatic change');
+  });
+
+  test('it supports box-sizing: border-box', async function(assert) {
+    this.set('value', longString);
+
+    await render(
+      hbs`<textarea style="box-sizing: border-box" value={{this.value}} {{autoresize}} />`
+    );
+    assert.extendedDom('textarea').doesNotOverflow();
   });
 });
