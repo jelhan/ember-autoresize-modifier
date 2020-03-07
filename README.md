@@ -1,7 +1,7 @@
 ember-autoresize-modifier
 ==============================================================================
 
-[Short description of the addon.]
+Element Modifier that resizes a `<textarea>` accordingly to the input.
 
 
 Compatibility
@@ -15,7 +15,7 @@ Compatibility
 Installation
 ------------------------------------------------------------------------------
 
-```
+```sh
 ember install ember-autoresize-modifier
 ```
 
@@ -23,7 +23,29 @@ ember install ember-autoresize-modifier
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+```hbs
+<textarea {{autoresize}}>
+```
+
+If you bind a property to the value of the textarea, you must also pass it as
+an argument to `{{autoresize}}` modifier. Otherwise the textarea won't resize
+when the value is changed programmatically:
+
+```hbs
+<textarea value={{this.foo}} {{autoresize this.foo}}>
+```
+
+Use CSS `min-height` and `max-height` properties to enforce a minimum and/or
+maximum height.
+
+
+Known Limitations
+------------------------------------------------------------------------------
+
+- Element Modifiers are not executed in server-side rendering / FastBoot. The
+  textarea won't be resized until rehydration.
+- Resizing the width of a textarea is not supported yet. Pull requests are
+  welcome.
 
 
 Contributing
