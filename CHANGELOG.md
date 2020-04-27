@@ -1,3 +1,11 @@
+## v0.2.1 (2020-04-27)
+
+#### :bug: Bug Fix
+* [#28](https://github.com/jelhan/ember-autoresize-modifier/pull/28) ember-modifier is required at runtime ([@jelhan](https://github.com/jelhan))
+
+#### Committers: 1
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
 ## v0.2.0 (2020-03-07)
 
 #### :rocket: Enhancement
