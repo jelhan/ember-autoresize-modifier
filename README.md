@@ -35,6 +35,10 @@ when the value is changed programmatically:
 <textarea value={{this.foo}} {{autoresize this.foo}}>
 ```
 
+The addon takes resizes the textarea by setting `height` CSS property. It
+overrules all custom values of the `height` property. Therefore styles of
+textareas using this modifier must not rely on `height` CSS property.
+
 Use CSS `min-height` and `max-height` properties to enforce a minimum and/or
 maximum height.
 
