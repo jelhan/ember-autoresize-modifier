@@ -39,7 +39,7 @@ module.exports = {
         node: true,
       },
       plugins: ['node'],
-      extends: ['plugin:node/recommended']
-    }
-  ]
+      extends: ['plugin:node/recommended'],
+    },
+  ],
 };
