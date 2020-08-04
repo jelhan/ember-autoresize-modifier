@@ -1,6 +1,6 @@
 {
   "name": "ember-autoresize-modifier",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Autoresize Element Modifier for Ember.js",
   "keywords": [
     "ember-addon"

@@ -1,3 +1,14 @@
+## v0.3.0 (2020-08-04)
+
+#### :boom: Breaking Change
+* [#46](https://github.com/jelhan/ember-autoresize-modifier/pull/46) Update dependency ember-modifier to v2 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### :memo: Documentation
+* [#48](https://github.com/jelhan/ember-autoresize-modifier/pull/48) document limitation regarding height CSS property ([@jelhan](https://github.com/jelhan))
+
+#### Committers: 1
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
 ## v0.2.1 (2020-04-27)
 
 #### :bug: Bug Fix
