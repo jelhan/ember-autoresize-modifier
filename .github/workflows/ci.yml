@@ -1,6 +1,10 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   lint:
@@ -26,7 +30,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        browser: [chrome, firefox]
+        browser: [chrome]
 
     steps:
     - uses: actions/checkout@v2
@@ -48,7 +52,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        browser: [chrome, firefox]
+        browser: [chrome]
 
     steps:
     - uses: actions/checkout@v2
@@ -72,6 +76,7 @@ jobs:
       fail-fast: true
       matrix:
         ember-try-scenario: [
+          ember-lts-3.12,
           ember-lts-3.16,
           ember-lts-3.20,
           ember-release,
@@ -82,8 +87,6 @@ jobs:
         allow-failure: [false]
         include:
           - ember-try-scenario: ember-canary
-            allow-failure: true
-          - ember-try-scenario: embroider-tests
             allow-failure: true
 
     steps:
