@@ -26,6 +26,11 @@ module('Integration | Modifier | autoresize', function (hooks) {
           let result = element.clientHeight === element.scrollHeight;
           assert.ok(result, message);
         },
+        doesNotOverflowX(message = 'element does not overflow') {
+          let element = find(selector);
+          let result = element.clientWidth === element.scrollWidth;
+          assert.ok(result, message);
+        },
       };
     };
   });
@@ -91,5 +96,64 @@ module('Integration | Modifier | autoresize', function (hooks) {
       hbs`<textarea style="box-sizing: border-box" value={{this.value}} {{autoresize}} />`
     );
     assert.extendedDom('textarea').doesNotOverflowY();
+
+    await render(
+      hbs`<textarea style="box-sizing: border-box" value={{this.value}} {{autoresize mode='width'}} />`
+    );
+    assert.extendedDom('textarea').doesNotOverflowX();
+  });
+
+  test('it resizes textarea width to fit input on initial render', async function (assert) {
+    this.set('value', longString);
+
+    await render(hbs`<textarea value={{this.value}} {{autoresize mode='width'}} />`);
+    assert.extendedDom('textarea').doesNotOverflowX();
+  });
+
+  test('it grows textarea width on input to fit value', async function (assert) {
+    await render(hbs`<textarea {{autoresize mode='width'}} />`);
+
+    let element = find('textarea');
+    let widthBefore = element.clientWidth;
+
+    assert.extendedDom(element).doesNotOverflowX('textarea does not overflow before input');
+
+    await fillIn(element, longString);
+    assert.ok(widthBefore < element.clientWidth, 'textarea grows on input of long string');
+    assert
+      .extendedDom(element)
+      .doesNotOverflowX('textarea does not overflow after input of long string');
+  });
+
+  test('it shrinks textarea width on input to fit value', async function (assert) {
+    this.set('value', longString);
+
+    await render(hbs`<textarea value={{this.value}} {{autoresize mode='width'}} />`);
+
+    let element = find('textarea');
+    let widthBefore = element.clientWidth;
+
+    assert.extendedDom(element).doesNotOverflowX('textarea does not overflow before input');
+
+    await fillIn(element, '');
+    assert.ok(widthBefore > element.clientWidth, 'textarea shrinks on input of shorter string');
+    assert
+      .extendedDom(element)
+      .doesNotOverflowX('textarea does not overflow after input of shorter string');
+  });
+
+  test('it resizes width if value changes programmatically', async function (assert) {
+    this.set('value', '');
+
+    await render(hbs`<textarea value={{this.value}} {{autoresize this.value mode='width'}} />`);
+
+    let element = find('textarea');
+    let widthBefore = element.clientWidth;
+
+    this.set('value', longString);
+    assert.ok(widthBefore < element.clientWidth, 'textarea resizes on programmatic change');
+    assert
+      .extendedDom(element)
+      .doesNotOverflowX('textarea does not overflow after programmatic change');
   });
 });

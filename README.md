@@ -25,6 +25,7 @@ Usage
 
 ```hbs
 <textarea {{autoresize}}>
+<textarea {{autoresize mode='width'}}>
 ```
 
 If you bind a property to the value of the textarea, you must also pass it as
@@ -33,14 +34,16 @@ when the value is changed programmatically:
 
 ```hbs
 <textarea value={{this.foo}} {{autoresize this.foo}}>
+<textarea value={{this.foo}} {{autoresize this.foo mode='width'}}>
 ```
 
-The addon takes resizes the textarea by setting `height` CSS property. It
-overrules all custom values of the `height` property. Therefore styles of
-textareas using this modifier must not rely on `height` CSS property.
+The addon takes resizes the textarea by setting `height` / `width` CSS
+property. It overrules all custom values of the `height` / `width` property.
+Therefore styles of textareas using this modifier must not rely on `height` /
+`width` CSS property.
 
-Use CSS `min-height` and `max-height` properties to enforce a minimum and/or
-maximum height.
+Use CSS `min-height` / `min-width` and `max-height` / `max-width` properties
+to enforce a minimum and/or maximum height / width.
 
 
 Known Limitations
@@ -48,8 +51,6 @@ Known Limitations
 
 - Element Modifiers are not executed in server-side rendering / FastBoot. The
   textarea won't be resized until rehydration.
-- Resizing the width of a textarea is not supported yet. Pull requests are
-  welcome.
 
 
 Contributing
