@@ -30,14 +30,14 @@ module('Integration | Modifier | autoresize', function (hooks) {
     };
   });
 
-  test('it resizes textarea to fit input on initial render', async function (assert) {
+  test('it resizes textarea height to fit input on initial render', async function (assert) {
     this.set('value', longString);
 
     await render(hbs`<textarea value={{this.value}} {{autoresize}} />`);
     assert.extendedDom('textarea').doesNotOverflow();
   });
 
-  test('it grows textarea on input to fit value', async function (assert) {
+  test('it grows textarea height on input to fit value', async function (assert) {
     await render(hbs`<textarea {{autoresize}} />`);
 
     let element = find('textarea');
@@ -52,7 +52,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
       .doesNotOverflow('textarea does not overflow after input of long string');
   });
 
-  test('it shrinks textarea on input to fit value', async function (assert) {
+  test('it shrinks textarea height on input to fit value', async function (assert) {
     this.set('value', longString);
 
     await render(hbs`<textarea value={{this.value}} {{autoresize}} />`);
@@ -69,7 +69,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
       .doesNotOverflow('textarea does not overflow after input of shorter string');
   });
 
-  test('it resizes if value changes programmatically', async function (assert) {
+  test('it resizes height if value changes programmatically', async function (assert) {
     this.set('value', '');
 
     await render(hbs`<textarea value={{this.value}} {{autoresize this.value}} />`);
