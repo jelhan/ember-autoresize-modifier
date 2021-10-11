@@ -1,46 +1,40 @@
 import Modifier from 'ember-modifier';
 import { action } from '@ember/object';
 import { scheduleOnce } from '@ember/runloop';
+import { capitalize } from '@ember/string';
 
 export default class AutoresizeModifier extends Modifier {
   @action
   resize() {
     let { element } = this;
+    let dimension = this.args.named.mode ?? 'height';
+    let previousWrap = element.style.whiteSpace;
 
-    if (this.args.named.mode === 'width') {
-      // width must be calculated independently from width previously enforced
-      element.style.width = 'auto';
-      // disable default wrapping to computed width
-      // https://developer.mozilla.org/fr/docs/Web/HTML/Element/Textarea#attr-wrap
-      let previousWrap = element.wrap;
-      element.wrap = 'off';
-
-      let isBorderBox = window.getComputedStyle(element).boxSizing === 'border-box';
-      let requiredWidth = element.scrollWidth;
-
-      if (isBorderBox) {
-        // borders must be added on top of scrollWidth if box-sizing is border-box
-        let borderWidth = element.offsetWidth - element.clientWidth;
-        requiredWidth += borderWidth;
-      }
-
-      element.wrap = previousWrap;
-      element.style.width = `${requiredWidth}px`;
-    } else {
-      // height must be calculated independently from height previously enforced
-      element.style.height = 'auto';
-
-      let isBorderBox = window.getComputedStyle(element).boxSizing === 'border-box';
-      let requiredHeight = element.scrollHeight;
-
-      if (isBorderBox) {
-        // borders must be added on top of scrollHeight if box-sizing is border-box
-        let borderHeight = element.offsetHeight - element.clientHeight;
-        requiredHeight += borderHeight;
-      }
-
-      element.style.height = `${requiredHeight}px`;
+    if (dimension === 'width') {
+      // disable default wrapping
+      element.style.whiteSpace = 'pre';
     }
+
+    let capitalizeDimension = capitalize(dimension);
+
+    // disable default wrapping
+
+    // height / width must be calculated independently from height / width previously enforced
+    element.style[dimension] = 'auto';
+
+    let isBorderBox = window.getComputedStyle(element).boxSizing === 'border-box';
+    let requiredDimension = element[`scroll${capitalizeDimension}`];
+
+    if (isBorderBox) {
+      // borders must be added on top of scrollHeight / scrollWidth if box-sizing is border-box
+      let borderDimension =
+        element[`offset${capitalizeDimension}`] - element[`client${capitalizeDimension}`];
+      requiredDimension += borderDimension;
+    }
+
+    element.style[dimension] = `${requiredDimension}px`;
+
+    element.style.whiteSpace = previousWrap;
   }
 
   @action
