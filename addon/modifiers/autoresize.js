@@ -17,8 +17,6 @@ export default class AutoresizeModifier extends Modifier {
 
     let capitalizeDimension = capitalize(dimension);
 
-    // disable default wrapping
-
     // height / width must be calculated independently from height / width previously enforced
     element.style[dimension] = 'auto';
 
