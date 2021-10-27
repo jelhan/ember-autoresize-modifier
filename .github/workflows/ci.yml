@@ -22,6 +22,8 @@
 #$   - scenario: ember-canary
 #$   - scenario: ember-default-with-jquery
 #$   - scenario: ember-classic
+#$   - scenario: embroider-safe
+#$   - scenario: embroider-optimized
 #$ nodeVersion: 12.x
 #$ packageManager: yarn
 #
@@ -178,7 +180,9 @@ jobs:
           ember-beta,
           ember-canary,
           ember-default-with-jquery,
-          ember-classic
+          ember-classic,
+          embroider-safe,
+          embroider-optimized
         ]
 
     steps:
