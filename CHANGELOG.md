@@ -1,4 +1,19 @@
 
+
+## v0.5.0 (2021-10-27)
+
+#### :boom: Breaking Change
+* [#106](https://github.com/jelhan/ember-autoresize-modifier/pull/106) drop support for Ember CLI < 3.24 ([@jelhan](https://github.com/jelhan))
+* [#103](https://github.com/jelhan/ember-autoresize-modifier/pull/103) Update dependency ember-modifier to v3 ([@renovate[bot]](https://github.com/apps/renovate))
+* [#93](https://github.com/jelhan/ember-autoresize-modifier/pull/93) Update dependency ember-auto-import to v2 ([@renovate[bot]](https://github.com/apps/renovate))
+* [#105](https://github.com/jelhan/ember-autoresize-modifier/pull/105) drop support for Ember < 3.24 ([@jelhan](https://github.com/jelhan))
+
+#### :house: Internal
+* [#107](https://github.com/jelhan/ember-autoresize-modifier/pull/107) upgrade addon blueprints with Ember 3.28 ([@jelhan](https://github.com/jelhan))
+
+#### Committers: 1
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
 ## v0.4.0 (2021-10-27)
 
 #### :boom: Breaking Change
