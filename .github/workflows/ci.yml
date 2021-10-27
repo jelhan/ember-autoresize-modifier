@@ -15,9 +15,8 @@
 #$ browsers:
 #$   - chrome
 #$ emberTryScenarios:
-#$   - scenario: ember-lts-3.12
-#$   - scenario: ember-lts-3.16
-#$   - scenario: ember-lts-3.20
+#$   - scenario: ember-lts-3.24
+#$   - scenario: ember-lts-3.28
 #$   - scenario: ember-release
 #$   - scenario: ember-beta
 #$   - scenario: ember-canary
@@ -173,9 +172,8 @@ jobs:
       fail-fast: true
       matrix:
         ember-try-scenario: [
-          ember-lts-3.12,
-          ember-lts-3.16,
-          ember-lts-3.20,
+          ember-lts-3.24,
+          ember-lts-3.28,
           ember-release,
           ember-beta,
           ember-canary,
