@@ -20,13 +20,15 @@ export default class AutoresizeModifier extends Modifier {
     // height / width must be calculated independently from height / width previously enforced
     element.style[dimension] = 'auto';
 
-    let isBorderBox = window.getComputedStyle(element).boxSizing === 'border-box';
+    let isBorderBox =
+      window.getComputedStyle(element).boxSizing === 'border-box';
     let requiredDimension = element[`scroll${capitalizeDimension}`];
 
     if (isBorderBox) {
       // borders must be added on top of scrollHeight / scrollWidth if box-sizing is border-box
       let borderDimension =
-        element[`offset${capitalizeDimension}`] - element[`client${capitalizeDimension}`];
+        element[`offset${capitalizeDimension}`] -
+        element[`client${capitalizeDimension}`];
       requiredDimension += borderDimension;
     }
 
