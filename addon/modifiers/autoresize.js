@@ -24,12 +24,16 @@ export default class AutoresizeModifier extends Modifier {
     }
 
     let capitalizeDimension = capitalize(dimension);
+    let computedStyle = window.getComputedStyle(element);
+    let minDimension = computedStyle[`min${capitalizeDimension}`];
 
     // height / width must be calculated independently from height / width previously enforced
-    element.style[dimension] = 'auto';
+    // and calculation should start from min height or width when specified
+    element.style[dimension] = parseInt(minDimension, 10)
+      ? minDimension
+      : 'auto';
 
-    let isBorderBox =
-      window.getComputedStyle(element).boxSizing === 'border-box';
+    let isBorderBox = computedStyle.boxSizing === 'border-box';
     let requiredDimension = element[`scroll${capitalizeDimension}`];
 
     if (isBorderBox) {
