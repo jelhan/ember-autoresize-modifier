@@ -20,7 +20,6 @@
 #$   - scenario: ember-release
 #$   - scenario: ember-beta
 #$   - scenario: ember-canary
-#$   - scenario: ember-default-with-jquery
 #$   - scenario: ember-classic
 #$   - scenario: embroider-safe
 #$   - scenario: embroider-optimized
@@ -44,7 +43,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
       with:
         fetch-depth: 1
 
@@ -58,7 +57,7 @@ jobs:
 
     - name: Cache package manager's global cache and node_modules
       id: cache-dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v2
       with:
         path: |
           ${{ steps.global-cache-dir-path.outputs.dir }}
@@ -89,7 +88,7 @@ jobs:
         browser: [chrome]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
       with:
         fetch-depth: 1
 
@@ -103,7 +102,7 @@ jobs:
 
     - name: Cache package manager's global cache and node_modules
       id: cache-dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v2
       with:
         path: |
           ${{ steps.global-cache-dir-path.outputs.dir }}
@@ -134,7 +133,7 @@ jobs:
         browser: [chrome]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
       with:
         fetch-depth: 1
 
@@ -148,7 +147,7 @@ jobs:
 
     - name: Cache package manager's global cache and node_modules
       id: cache-dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v2
       with:
         path: |
           ${{ steps.global-cache-dir-path.outputs.dir }}
@@ -179,14 +178,13 @@ jobs:
           ember-release,
           ember-beta,
           ember-canary,
-          ember-default-with-jquery,
           ember-classic,
           embroider-safe,
           embroider-optimized
         ]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
       with:
         fetch-depth: 1
 
@@ -200,7 +198,7 @@ jobs:
 
     - name: Cache package manager's global cache and node_modules
       id: cache-dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v2
       with:
         path: |
           ${{ steps.global-cache-dir-path.outputs.dir }}
