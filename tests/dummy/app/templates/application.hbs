@@ -5,27 +5,29 @@
 
 <h3>Fits existing content on initial render</h3>
 <textarea
-  value="Some content with line breaks.
+  {{autoresize}}
+>
+Some content with line breaks.
 This is a new line.
 And the third line.
-And a very long string that does not fit into one line. Cause it has even more content."
-  {{autoresize}}
-/>
+And a very long string that does not fit into one line. Cause it has even more content.
+</textarea>
 
 <h3>Respects min-heigth and max-heigth CSS values</h3>
 {{!-- template-lint-disable no-inline-styles --}}
 <textarea
   style="min-height: 100px; max-height: 250px"
-  value="Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width."
   {{autoresize}}
-/>
+>
+Delete some content from this textarea to see it shrink until it reaches min-width.
+Delete some content from this textarea to see it shrink until it reaches min-width.
+Delete some content from this textarea to see it shrink until it reaches min-width.
+Delete some content from this textarea to see it shrink until it reaches min-width.
+Delete some content from this textarea to see it shrink until it reaches min-width.
+Delete some content from this textarea to see it shrink until it reaches min-width.
+Delete some content from this textarea to see it shrink until it reaches min-width.
+Delete some content from this textarea to see it shrink until it reaches min-width.
+</textarea>
 {{!-- template-lint-enable no-inline-styles --}}
 
 <h3>Resizes when value changes upstream</h3>
@@ -35,18 +37,23 @@ Delete some content from this textarea to see it shrink until it reaches min-wid
   directly or updated upstream.
 </p>
 {{!-- template-lint-disable no-action --}}
-<textarea value={{this.value}} {{autoresize this.value}} {{on "input" (action (mut this.value) value="target.value")}} />
-<textarea value={{this.value}} {{autoresize this.value}} {{on "input" (action (mut this.value) value="target.value")}} />
+<textarea {{autoresize this.value}} {{on "input" (action (mut this.value) value="target.value")}}>
+{{this.value}}
+</textarea>
+<textarea {{autoresize this.value}} {{on "input" (action (mut this.value) value="target.value")}}>
+{{this.value}}
+</textarea>
 {{!-- template-lint-enable no-action --}}
 
 <h3>Supports box-sizing: border-box</h3>
 {{!-- template-lint-disable no-inline-styles --}}
 <textarea
   style="box-sizing: border-box"
-  value="Some content with line breaks.
+  {{autoresize}}
+>
+Some content with line breaks.
 This is a new line.
 And the third line.
-And a very long string that does not fit into one line. Cause it has even more content."
-  {{autoresize}}
-/>
+And a very long string that does not fit into one line. Cause it has even more content.
+</textarea>
 {{!-- template-lint-enable no-inline-styles --}}
