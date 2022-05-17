@@ -1,6 +1,18 @@
+
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":preserveSemverRanges",
+    ":maintainLockFilesWeekly"
   ],
-  "rangeStrategy": "replace"
+  "lockFileMaintenance": {
+    "automerge": true
+  },
+  "postUpdateOptions": ["yarnDedupeFewer"],
+  "packageRules": [
+    {
+      "matchPackagePrefixes": ["@types/ember__"],
+      "groupName": "ember types"
+    }
+  ]
 }
