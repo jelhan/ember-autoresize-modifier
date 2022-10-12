@@ -8,12 +8,15 @@ function cleanup(instance) {
   let { el, scheduleResize } = instance;
 
   if (el && scheduleResize) {
+    console.log('clean');
     el.removeEventListener('input', scheduleResize);
     instance.el = null;
   }
 }
 
 export default class AutoresizeModifier extends Modifier {
+  _oldValue = null;
+
   @action
   resize() {
     let { el: element } = this;
@@ -52,11 +55,16 @@ export default class AutoresizeModifier extends Modifier {
     scheduleOnce('afterRender', this, 'resize');
   }
 
-  modify(element, _, named) {
+  modify(element, [value], named) {
     this.el = element;
     this.named = named;
 
-    this.el.addEventListener('input', this.scheduleResize);
+    if (this.value === null) {
+      this.el.addEventListener('input', this.scheduleResize);
+    }
+
+    this.value = value;
+
     this.scheduleResize();
     registerDestructor(this, cleanup)
   }
