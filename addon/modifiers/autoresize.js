@@ -2,12 +2,22 @@ import Modifier from 'ember-modifier';
 import { action } from '@ember/object';
 import { scheduleOnce } from '@ember/runloop';
 import { capitalize } from '@ember/string';
+import { registerDestructor } from '@ember/destroyable';
+
+function cleanup(instance) {
+  let { el, scheduleResize } = instance;
+
+  if (el && scheduleResize) {
+    el.removeEventListener('input', scheduleResize);
+    instance.el = null;
+  }
+}
 
 export default class AutoresizeModifier extends Modifier {
   @action
   resize() {
-    let { element } = this;
-    let dimension = this.args.named.mode ?? 'height';
+    let { el: element } = this;
+    let dimension = this.named.mode ?? 'height';
     let previousWrap = element.style.whiteSpace;
 
     if (dimension === 'width') {
@@ -42,21 +52,12 @@ export default class AutoresizeModifier extends Modifier {
     scheduleOnce('afterRender', this, 'resize');
   }
 
-  didInstall() {
-    // resize for initial value
+  modify(element, _, named) {
+    this.el = element;
+    this.named = named;
+
+    this.el.addEventListener('input', this.scheduleResize);
     this.scheduleResize();
-
-    // resize on every input event
-    this.element.addEventListener('input', this.scheduleResize);
-  }
-
-  didUpdateArguments() {
-    // resize when arguments changes
-    this.scheduleResize();
-  }
-
-  willRemove() {
-    // clean up
-    this.element.removeEventListener('input', this.scheduleResize);
+    registerDestructor(this, cleanup)
   }
 }
