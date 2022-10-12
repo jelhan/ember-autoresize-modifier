@@ -8,7 +8,6 @@ function cleanup(instance) {
   let { el, scheduleResize } = instance;
 
   if (el && scheduleResize) {
-    console.log('clean');
     el.removeEventListener('input', scheduleResize);
     instance.el = null;
     instance.listener = null;
