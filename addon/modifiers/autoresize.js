@@ -11,11 +11,12 @@ function cleanup(instance) {
     console.log('clean');
     el.removeEventListener('input', scheduleResize);
     instance.el = null;
+    instance.listener = null;
   }
 }
 
 export default class AutoresizeModifier extends Modifier {
-  _oldValue = null;
+  listener = null;
 
   @action
   resize() {
@@ -58,12 +59,11 @@ export default class AutoresizeModifier extends Modifier {
   modify(element, [value], named) {
     this.el = element;
     this.named = named;
-
-    if (this.value === null) {
-      this.el.addEventListener('input', this.scheduleResize);
-    }
-
     this.value = value;
+
+    if (this.listener === null) {
+      this.listener = this.el.addEventListener('input', this.scheduleResize);
+    }
 
     this.scheduleResize();
     registerDestructor(this, cleanup)
