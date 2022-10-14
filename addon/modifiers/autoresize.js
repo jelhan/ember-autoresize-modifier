@@ -6,12 +6,7 @@ import { registerDestructor } from '@ember/destroyable';
 
 function cleanup(instance) {
   let { el, scheduleResize } = instance;
-
-  if (el && scheduleResize) {
-    el.removeEventListener('input', scheduleResize);
-    instance.el = null;
-    instance.listener = null;
-  }
+  el.removeEventListener('input', scheduleResize);
 }
 
 export default class AutoresizeModifier extends Modifier {
@@ -65,6 +60,6 @@ export default class AutoresizeModifier extends Modifier {
     }
 
     this.scheduleResize();
-    registerDestructor(this, cleanup)
+    registerDestructor(this, cleanup);
   }
 }
