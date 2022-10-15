@@ -1,4 +1,4 @@
-<h2 id='title'>Ember Autoresize Modifier</h2>
+<h2 id="title">Ember Autoresize Modifier</h2>
 
 <h3>Default: empty text area without styles</h3>
 <textarea {{autoresize}}></textarea>
@@ -12,7 +12,7 @@
 
 <h3>Respects min-heigth and max-heigth CSS values</h3>
 {{! template-lint-disable no-inline-styles }}
-<textarea style='min-height: 100px; max-height: 250px' {{autoresize}}>
+<textarea style="min-height: 100px; max-height: 250px" {{autoresize}}>
   Delete some content from this textarea to see it shrink until it reaches
   min-width. Delete some content from this textarea to see it shrink until it
   reaches min-width. Delete some content from this textarea to see it shrink
@@ -34,13 +34,13 @@
 {{! template-lint-disable no-action }}
 <textarea
   {{autoresize this.value}}
-  {{on 'input' (action (mut this.value) value='target.value')}}
+  {{on "input" (action (mut this.value) value="target.value")}}
 >
   {{this.value}}
 </textarea>
 <textarea
   {{autoresize this.value}}
-  {{on 'input' (action (mut this.value) value='target.value')}}
+  {{on "input" (action (mut this.value) value="target.value")}}
 >
   {{this.value}}
 </textarea>
@@ -48,7 +48,7 @@
 
 <h3>Supports box-sizing: border-box</h3>
 {{! template-lint-disable no-inline-styles }}
-<textarea style='box-sizing: border-box' {{autoresize}}>
+<textarea style="box-sizing: border-box" {{autoresize}}>
   Some content with line breaks. This is a new line. And the third line. And a
   very long string that does not fit into one line. Cause it has even more
   content.
