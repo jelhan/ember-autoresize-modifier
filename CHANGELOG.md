@@ -1,5 +1,23 @@
 
 
+
+## v0.6.0 (2022-10-15)
+
+#### :boom: Breaking Change
+* [#152](https://github.com/jelhan/ember-autoresize-modifier/pull/152) drop support for Ember 3.24 ([@jelhan](https://github.com/jelhan))
+* [#123](https://github.com/jelhan/ember-autoresize-modifier/pull/123) drop support for node 12 ([@jelhan](https://github.com/jelhan))
+
+#### :rocket: Enhancement
+* [#149](https://github.com/jelhan/ember-autoresize-modifier/pull/149) Resolve ember-modifier deprecation by refactoring to modify hook ([@evoactivity](https://github.com/evoactivity))
+
+#### :house: Internal
+* [#150](https://github.com/jelhan/ember-autoresize-modifier/pull/150) prettify dummy app templates ([@jelhan](https://github.com/jelhan))
+* [#122](https://github.com/jelhan/ember-autoresize-modifier/pull/122) textarea does not support value attribute ([@jelhan](https://github.com/jelhan))
+
+#### Committers: 2
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+- Liam Potter ([@evoactivity](https://github.com/evoactivity))
+
 ## v0.5.0 (2021-10-27)
 
 #### :boom: Breaking Change
