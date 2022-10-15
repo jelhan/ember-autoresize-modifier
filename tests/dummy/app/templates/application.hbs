@@ -1,59 +1,56 @@
 <h2 id="title">Ember Autoresize Modifier</h2>
 
 <h3>Default: empty text area without styles</h3>
-<textarea {{autoresize}} />
+<textarea {{autoresize}}></textarea>
 
 <h3>Fits existing content on initial render</h3>
-<textarea
-  {{autoresize}}
->
-Some content with line breaks.
-This is a new line.
-And the third line.
-And a very long string that does not fit into one line. Cause it has even more content.
+<textarea {{autoresize}}>
+  Some content with line breaks. This is a new line. And the third line. And a
+  very long string that does not fit into one line. Cause it has even more
+  content.
 </textarea>
 
 <h3>Respects min-heigth and max-heigth CSS values</h3>
-{{!-- template-lint-disable no-inline-styles --}}
-<textarea
-  style="min-height: 100px; max-height: 250px"
-  {{autoresize}}
->
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
-Delete some content from this textarea to see it shrink until it reaches min-width.
+{{! template-lint-disable no-inline-styles }}
+<textarea style="min-height: 100px; max-height: 250px" {{autoresize}}>
+  Delete some content from this textarea to see it shrink until it reaches
+  min-width. Delete some content from this textarea to see it shrink until it
+  reaches min-width. Delete some content from this textarea to see it shrink
+  until it reaches min-width. Delete some content from this textarea to see it
+  shrink until it reaches min-width. Delete some content from this textarea to
+  see it shrink until it reaches min-width. Delete some content from this
+  textarea to see it shrink until it reaches min-width. Delete some content from
+  this textarea to see it shrink until it reaches min-width. Delete some content
+  from this textarea to see it shrink until it reaches min-width.
 </textarea>
-{{!-- template-lint-enable no-inline-styles --}}
+{{! template-lint-enable no-inline-styles }}
 
 <h3>Resizes when value changes upstream</h3>
 <p>
-  The value of both textareas is bound to each other. If you change it in one, it's reflected in
-  the other as well. Both resize automatically to fit the value regardless if value is entered
-  directly or updated upstream.
+  The value of both textareas is bound to each other. If you change it in one,
+  it's reflected in the other as well. Both resize automatically to fit the
+  value regardless if value is entered directly or updated upstream.
 </p>
-{{!-- template-lint-disable no-action --}}
-<textarea {{autoresize this.value}} {{on "input" (action (mut this.value) value="target.value")}}>
-{{this.value}}
+{{! template-lint-disable no-action }}
+<textarea
+  {{autoresize this.value}}
+  {{on "input" (action (mut this.value) value="target.value")}}
+>
+  {{this.value}}
 </textarea>
-<textarea {{autoresize this.value}} {{on "input" (action (mut this.value) value="target.value")}}>
-{{this.value}}
+<textarea
+  {{autoresize this.value}}
+  {{on "input" (action (mut this.value) value="target.value")}}
+>
+  {{this.value}}
 </textarea>
-{{!-- template-lint-enable no-action --}}
+{{! template-lint-enable no-action }}
 
 <h3>Supports box-sizing: border-box</h3>
-{{!-- template-lint-disable no-inline-styles --}}
-<textarea
-  style="box-sizing: border-box"
-  {{autoresize}}
->
-Some content with line breaks.
-This is a new line.
-And the third line.
-And a very long string that does not fit into one line. Cause it has even more content.
+{{! template-lint-disable no-inline-styles }}
+<textarea style="box-sizing: border-box" {{autoresize}}>
+  Some content with line breaks. This is a new line. And the third line. And a
+  very long string that does not fit into one line. Cause it has even more
+  content.
 </textarea>
-{{!-- template-lint-enable no-inline-styles --}}
+{{! template-lint-enable no-inline-styles }}
