@@ -49,7 +49,12 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', shortString);
 
     await render(
-      hbs`<textarea style="padding: 0; min-height: 50px;" value={{this.value}} {{autoresize}} />`
+      hbs`{{! template-lint-disable no-inline-styles  }}
+<textarea
+  style='padding: 0; min-height: 50px;'
+  value={{this.value}}
+  {{autoresize}}
+></textarea>`
     );
     let textarea = find('textarea');
     assert.strictEqual(textarea.scrollHeight, 50);
@@ -60,7 +65,12 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
 
     await render(
-      hbs`<textarea style="min-height: 50px;" value={{this.value}} {{autoresize}} />`
+      hbs`{{! template-lint-disable no-inline-styles  }}
+<textarea
+  style='min-height: 50px;'
+  value={{this.value}}
+  {{autoresize}}
+></textarea>`
     );
     let textarea = find('textarea');
     assert.ok(textarea.scrollHeight > 50);
@@ -71,7 +81,12 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', shortString);
 
     await render(
-      hbs`<textarea style="padding: 0; min-width: 200px;" value={{this.value}} {{autoresize mode="width"}} />`
+      hbs`{{! template-lint-disable no-inline-styles  }}
+<textarea
+  style='padding: 0; min-width: 200px;'
+  value={{this.value}}
+  {{autoresize mode='width'}}
+></textarea>`
     );
     let textarea = find('textarea');
     assert.strictEqual(textarea.scrollWidth, 200);
@@ -82,7 +97,12 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
 
     await render(
-      hbs`<textarea style="min-width: 50px;" value={{this.value}} {{autoresize mode="width"}} />`
+      hbs`{{! template-lint-disable no-inline-styles  }}
+<textarea
+  style='min-width: 50px;'
+  value={{this.value}}
+  {{autoresize mode='width'}}
+></textarea>`
     );
     let textarea = find('textarea');
     assert.ok(textarea.scrollWidth > 50);
