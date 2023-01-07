@@ -6,6 +6,7 @@ import hbs from 'htmlbars-inline-precompile';
 module('Integration | Modifier | autoresize', function (hooks) {
   setupRenderingTest(hooks);
 
+  let shortString = 'abc';
   let longString;
   hooks.beforeEach(function () {
     longString = '';
@@ -40,6 +41,50 @@ module('Integration | Modifier | autoresize', function (hooks) {
 
     await render(hbs`<textarea value={{this.value}} {{autoresize}} />`);
     assert.extendedDom('textarea').doesNotOverflowY();
+  });
+
+  test('it resizes textarea height to fit input min height on initial render with small value', async function (assert) {
+    this.set('value', shortString);
+
+    await render(
+      hbs`<textarea style="padding: 0; min-height: 50px;" value={{this.value}} {{autoresize}} />`
+    );
+    let textarea = find('textarea');
+    assert.strictEqual(textarea.scrollHeight, 50);
+    assert.extendedDom('textarea').doesNotOverflowY();
+  });
+
+  test('it resizes textarea height to fit input min height on initial render with long value', async function (assert) {
+    this.set('value', longString);
+
+    await render(
+      hbs`<textarea style="min-height: 50px;" value={{this.value}} {{autoresize}} />`
+    );
+    let textarea = find('textarea');
+    assert.ok(textarea.scrollHeight > 50);
+    assert.extendedDom('textarea').doesNotOverflowY();
+  });
+
+  test('it resizes textarea width to fit input min width on initial render', async function (assert) {
+    this.set('value', shortString);
+
+    await render(
+      hbs`<textarea style="padding: 0; min-width: 200px;" value={{this.value}} {{autoresize mode="width"}} />`
+    );
+    let textarea = find('textarea');
+    assert.strictEqual(textarea.scrollWidth, 200);
+    assert.extendedDom('textarea').doesNotOverflowX();
+  });
+
+  test('it resizes textarea width to fit input min width on initial render with long value', async function (assert) {
+    this.set('value', longString);
+
+    await render(
+      hbs`<textarea style="min-width: 50px;" value={{this.value}} {{autoresize mode="width"}} />`
+    );
+    let textarea = find('textarea');
+    assert.ok(textarea.scrollWidth > 50);
+    assert.extendedDom('textarea').doesNotOverflowX();
   });
 
   test('it grows textarea height on input to fit value', async function (assert) {
