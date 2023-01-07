@@ -69,10 +69,10 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', shortString);
 
     await render(
-      hbs`<textarea style="padding: 0; min-width: 50px;" value={{this.value}} {{autoresize mode="width"}} />`
+      hbs`<textarea style="padding: 0; min-width: 200px;" value={{this.value}} {{autoresize mode="width"}} />`
     );
     let textarea = find('textarea');
-    assert.strictEqual(textarea.scrollWidth, 50);
+    assert.strictEqual(textarea.scrollWidth, 200);
     assert.extendedDom('textarea').doesNotOverflowX();
   });
 
