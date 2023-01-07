@@ -1,6 +1,21 @@
 
 
 
+
+## v0.7.0 (2023-01-07)
+
+#### :boom: Breaking Change
+* [#170](https://github.com/jelhan/ember-autoresize-modifier/pull/170) add ember-auto-import v2 as direct dependency ([@jelhan](https://github.com/jelhan))
+
+#### :rocket: Enhancement
+* [#171](https://github.com/jelhan/ember-autoresize-modifier/pull/171) Support ember modifier v4 ([@jelhan](https://github.com/jelhan))
+
+#### :house: Internal
+* [#172](https://github.com/jelhan/ember-autoresize-modifier/pull/172) Increase test coverage ([@jelhan](https://github.com/jelhan))
+
+#### Committers: 1
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
 ## v0.6.0 (2022-10-15)
 
 #### :boom: Breaking Change
