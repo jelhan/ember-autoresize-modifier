@@ -39,7 +39,9 @@ module('Integration | Modifier | autoresize', function (hooks) {
   test('it resizes textarea height to fit input on initial render', async function (assert) {
     this.set('value', longString);
 
-    await render(hbs`<textarea value={{this.value}} {{autoresize}} />`);
+    await render(
+      hbs`<textarea value={{this.value}} {{autoresize}}></textarea>`
+    );
     assert.extendedDom('textarea').doesNotOverflowY();
   });
 
@@ -47,7 +49,12 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', shortString);
 
     await render(
-      hbs`<textarea style="padding: 0; min-height: 50px;" value={{this.value}} {{autoresize}} />`
+      hbs`{{! template-lint-disable no-inline-styles  }}
+<textarea
+  style='padding: 0; min-height: 50px;'
+  value={{this.value}}
+  {{autoresize}}
+></textarea>`
     );
     let textarea = find('textarea');
     assert.strictEqual(textarea.scrollHeight, 50);
@@ -58,7 +65,12 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
 
     await render(
-      hbs`<textarea style="min-height: 50px;" value={{this.value}} {{autoresize}} />`
+      hbs`{{! template-lint-disable no-inline-styles  }}
+<textarea
+  style='min-height: 50px;'
+  value={{this.value}}
+  {{autoresize}}
+></textarea>`
     );
     let textarea = find('textarea');
     assert.ok(textarea.scrollHeight > 50);
@@ -69,7 +81,12 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', shortString);
 
     await render(
-      hbs`<textarea style="padding: 0; min-width: 200px;" value={{this.value}} {{autoresize mode="width"}} />`
+      hbs`{{! template-lint-disable no-inline-styles  }}
+<textarea
+  style='padding: 0; min-width: 200px;'
+  value={{this.value}}
+  {{autoresize mode='width'}}
+></textarea>`
     );
     let textarea = find('textarea');
     assert.strictEqual(textarea.scrollWidth, 200);
@@ -80,7 +97,12 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
 
     await render(
-      hbs`<textarea style="min-width: 50px;" value={{this.value}} {{autoresize mode="width"}} />`
+      hbs`{{! template-lint-disable no-inline-styles  }}
+<textarea
+  style='min-width: 50px;'
+  value={{this.value}}
+  {{autoresize mode='width'}}
+></textarea>`
     );
     let textarea = find('textarea');
     assert.ok(textarea.scrollWidth > 50);
@@ -88,7 +110,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
   });
 
   test('it grows textarea height on input to fit value', async function (assert) {
-    await render(hbs`<textarea {{autoresize}} />`);
+    await render(hbs`<textarea {{autoresize}}></textarea>`);
 
     let element = find('textarea');
     let heightBefore = element.clientHeight;
@@ -112,7 +134,9 @@ module('Integration | Modifier | autoresize', function (hooks) {
   test('it shrinks textarea height on input to fit value', async function (assert) {
     this.set('value', longString);
 
-    await render(hbs`<textarea value={{this.value}} {{autoresize}} />`);
+    await render(
+      hbs`<textarea value={{this.value}} {{autoresize}}></textarea>`
+    );
 
     let element = find('textarea');
     let heightBefore = element.clientHeight;
@@ -137,7 +161,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', '');
 
     await render(
-      hbs`<textarea value={{this.value}} {{autoresize this.value}} />`
+      hbs`<textarea value={{this.value}} {{autoresize this.value}}></textarea>`
     );
 
     let element = find('textarea');
@@ -157,12 +181,22 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
 
     await render(
-      hbs`<textarea style="box-sizing: border-box" value={{this.value}} {{autoresize}} />`
+      hbs`{{! template-lint-disable no-inline-styles  }}
+<textarea
+  style='box-sizing: border-box'
+  value={{this.value}}
+  {{autoresize}}
+></textarea>`
     );
     assert.extendedDom('textarea').doesNotOverflowY();
 
     await render(
-      hbs`<textarea style="box-sizing: border-box" value={{this.value}} {{autoresize mode='width'}} />`
+      hbs`{{! template-lint-disable no-inline-styles  }}
+<textarea
+  style='box-sizing: border-box'
+  value={{this.value}}
+  {{autoresize mode='width'}}
+></textarea>`
     );
     assert.extendedDom('textarea').doesNotOverflowX();
   });
@@ -171,13 +205,13 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
 
     await render(
-      hbs`<textarea value={{this.value}} {{autoresize mode='width'}} />`
+      hbs`<textarea value={{this.value}} {{autoresize mode='width'}}></textarea>`
     );
     assert.extendedDom('textarea').doesNotOverflowX();
   });
 
   test('it grows textarea width on input to fit value', async function (assert) {
-    await render(hbs`<textarea {{autoresize mode='width'}} />`);
+    await render(hbs`<textarea {{autoresize mode='width'}}></textarea>`);
 
     let element = find('textarea');
     let widthBefore = element.clientWidth;
@@ -202,7 +236,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
 
     await render(
-      hbs`<textarea value={{this.value}} {{autoresize mode='width'}} />`
+      hbs`<textarea value={{this.value}} {{autoresize mode='width'}}></textarea>`
     );
 
     let element = find('textarea');
@@ -228,7 +262,10 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', '');
 
     await render(
-      hbs`<textarea value={{this.value}} {{autoresize this.value mode='width'}} />`
+      hbs`<textarea
+  value={{this.value}}
+  {{autoresize this.value mode='width'}}
+></textarea>`
     );
 
     let element = find('textarea');
