@@ -71,6 +71,9 @@
     "release-it-lerna-changelog": "^5.0.0",
     "webpack": "5"
   },
+  "peerDependencies": {
+    "ember-source": ">=3.28.0"
+  },
   "engines": {
     "node": "18.* || >= 20"
   },
