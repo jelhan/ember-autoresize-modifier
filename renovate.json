@@ -1,18 +1,6 @@
-
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
-    ":preserveSemverRanges",
-    ":maintainLockFilesWeekly"
-  ],
-  "lockFileMaintenance": {
-    "automerge": true
-  },
-  "postUpdateOptions": ["yarnDedupeFewer"],
-  "packageRules": [
-    {
-      "matchPackagePrefixes": ["@types/ember__"],
-      "groupName": "ember types"
-    }
+    "local>kaliber5/renovate-config:ember-addon"
   ]
 }
