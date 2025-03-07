@@ -1,12 +1,11 @@
 'use strict';
 
 module.exports = {
-  singleQuote: true,
   overrides: [
     {
-      files: '*.hbs',
+      files: '*.{js,ts}',
       options: {
-        singleQuote: false,
+        singleQuote: true,
       },
     },
   ],

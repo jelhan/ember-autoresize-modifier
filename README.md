@@ -1,26 +1,22 @@
-ember-autoresize-modifier
-==============================================================================
+# ember-autoresize-modifier
 
 Element Modifier that resizes a `<textarea>` accordingly to the input.
 
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
 * Ember.js v4.8 or above
 * Ember CLI v4.8 or above
 * Node.js v18 or above
 
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```sh
 ember install ember-autoresize-modifier
 ```
 
 
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 ```hbs
 <textarea {{autoresize}}>
@@ -52,13 +48,11 @@ Known Limitations
   textarea won't be resized until rehydration.
 
 
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
