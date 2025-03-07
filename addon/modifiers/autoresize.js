@@ -46,6 +46,8 @@ export default class AutoresizeModifier extends Modifier {
 
   @action
   scheduleResize() {
+    // Relying on Ember's runloop directly as we don't want to pull in another dependency.
+    // eslint-disable-next-line ember/no-runloop
     scheduleOnce('afterRender', this, 'resize');
   }
 

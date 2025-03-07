@@ -40,7 +40,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
 
     await render(
-      hbs`<textarea value={{this.value}} {{autoresize}}></textarea>`
+      hbs`<textarea value={{this.value}} {{autoresize}}></textarea>`,
     );
     assert.extendedDom('textarea').doesNotOverflowY();
   });
@@ -54,7 +54,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
   style='padding: 0; min-height: 50px;'
   value={{this.value}}
   {{autoresize}}
-></textarea>`
+></textarea>`,
     );
     let textarea = find('textarea');
     assert.strictEqual(textarea.scrollHeight, 50);
@@ -70,7 +70,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
   style='min-height: 50px;'
   value={{this.value}}
   {{autoresize}}
-></textarea>`
+></textarea>`,
     );
     let textarea = find('textarea');
     assert.ok(textarea.scrollHeight > 50);
@@ -86,7 +86,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
   style='padding: 0; min-width: 200px;'
   value={{this.value}}
   {{autoresize mode='width'}}
-></textarea>`
+></textarea>`,
     );
     let textarea = find('textarea');
     assert.strictEqual(textarea.scrollWidth, 200);
@@ -102,7 +102,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
   style='min-width: 50px;'
   value={{this.value}}
   {{autoresize mode='width'}}
-></textarea>`
+></textarea>`,
     );
     let textarea = find('textarea');
     assert.ok(textarea.scrollWidth > 50);
@@ -122,12 +122,12 @@ module('Integration | Modifier | autoresize', function (hooks) {
     await fillIn(element, longString);
     assert.ok(
       heightBefore < element.clientHeight,
-      'textarea grows on input of long string'
+      'textarea grows on input of long string',
     );
     assert
       .extendedDom(element)
       .doesNotOverflowY(
-        'textarea does not overflow after input of long string'
+        'textarea does not overflow after input of long string',
       );
   });
 
@@ -135,7 +135,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
 
     await render(
-      hbs`<textarea value={{this.value}} {{autoresize}}></textarea>`
+      hbs`<textarea value={{this.value}} {{autoresize}}></textarea>`,
     );
 
     let element = find('textarea');
@@ -148,12 +148,12 @@ module('Integration | Modifier | autoresize', function (hooks) {
     await fillIn(element, '');
     assert.ok(
       heightBefore > element.clientHeight,
-      'textarea shrinks on input of shorter string'
+      'textarea shrinks on input of shorter string',
     );
     assert
       .extendedDom(element)
       .doesNotOverflowY(
-        'textarea does not overflow after input of shorter string'
+        'textarea does not overflow after input of shorter string',
       );
   });
 
@@ -161,7 +161,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', '');
 
     await render(
-      hbs`<textarea value={{this.value}} {{autoresize this.value}}></textarea>`
+      hbs`<textarea value={{this.value}} {{autoresize this.value}}></textarea>`,
     );
 
     let element = find('textarea');
@@ -170,7 +170,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
     assert.ok(
       heightBefore < element.clientHeight,
-      'textarea resizes on programmatic change'
+      'textarea resizes on programmatic change',
     );
     assert
       .extendedDom(element)
@@ -186,7 +186,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
   style='box-sizing: border-box'
   value={{this.value}}
   {{autoresize}}
-></textarea>`
+></textarea>`,
     );
     assert.extendedDom('textarea').doesNotOverflowY();
 
@@ -196,7 +196,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
   style='box-sizing: border-box'
   value={{this.value}}
   {{autoresize mode='width'}}
-></textarea>`
+></textarea>`,
     );
     assert.extendedDom('textarea').doesNotOverflowX();
   });
@@ -205,7 +205,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
 
     await render(
-      hbs`<textarea value={{this.value}} {{autoresize mode='width'}}></textarea>`
+      hbs`<textarea value={{this.value}} {{autoresize mode='width'}}></textarea>`,
     );
     assert.extendedDom('textarea').doesNotOverflowX();
   });
@@ -223,12 +223,12 @@ module('Integration | Modifier | autoresize', function (hooks) {
     await fillIn(element, longString);
     assert.ok(
       widthBefore < element.clientWidth,
-      'textarea grows on input of long string'
+      'textarea grows on input of long string',
     );
     assert
       .extendedDom(element)
       .doesNotOverflowX(
-        'textarea does not overflow after input of long string'
+        'textarea does not overflow after input of long string',
       );
   });
 
@@ -236,7 +236,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
 
     await render(
-      hbs`<textarea value={{this.value}} {{autoresize mode='width'}}></textarea>`
+      hbs`<textarea value={{this.value}} {{autoresize mode='width'}}></textarea>`,
     );
 
     let element = find('textarea');
@@ -249,12 +249,12 @@ module('Integration | Modifier | autoresize', function (hooks) {
     await fillIn(element, '');
     assert.ok(
       widthBefore > element.clientWidth,
-      'textarea shrinks on input of shorter string'
+      'textarea shrinks on input of shorter string',
     );
     assert
       .extendedDom(element)
       .doesNotOverflowX(
-        'textarea does not overflow after input of shorter string'
+        'textarea does not overflow after input of shorter string',
       );
   });
 
@@ -265,7 +265,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
       hbs`<textarea
   value={{this.value}}
   {{autoresize this.value mode='width'}}
-></textarea>`
+></textarea>`,
     );
 
     let element = find('textarea');
@@ -274,7 +274,7 @@ module('Integration | Modifier | autoresize', function (hooks) {
     this.set('value', longString);
     assert.ok(
       widthBefore < element.clientWidth,
-      'textarea resizes on programmatic change'
+      'textarea resizes on programmatic change',
     );
     assert
       .extendedDom(element)
