@@ -1,7 +1,6 @@
 import Modifier from 'ember-modifier';
 import { action } from '@ember/object';
 import { scheduleOnce } from '@ember/runloop';
-import { capitalize } from '@ember/string';
 import { registerDestructor } from '@ember/destroyable';
 
 function cleanup(instance) {
@@ -23,7 +22,7 @@ export default class AutoresizeModifier extends Modifier {
       element.style.whiteSpace = 'pre';
     }
 
-    let capitalizeDimension = capitalize(dimension);
+    let capitalizeDimension = dimension[0].toUpperCase() + dimension.slice(1);
 
     // height / width must be calculated independently from height / width previously enforced
     element.style[dimension] = 'auto';
