@@ -88,8 +88,8 @@ importers:
         specifier: ^4.0.0
         version: 4.2.0(ember-template-lint@5.13.0)(prettier@2.8.8)
       ember-try:
-        specifier: ^2.0.0
-        version: 2.0.0(encoding@0.1.13)
+        specifier: ^3.0.0
+        version: 3.0.0(encoding@0.1.13)
       eslint:
         specifier: ^8.37.0
         version: 8.57.1
@@ -2754,9 +2754,9 @@ packages:
     resolution: {integrity: sha512-jAv7fqYJK7QYYekPc/8Nr7KOqDpv/asqM6F8xcRnbmf9UrD35BkSffY63qUuiD9e0aR5qiMNBIQzH8f65rGDqw==}
     engines: {node: 10.* || 12.* || >= 14}
 
-  ember-try@2.0.0:
-    resolution: {integrity: sha512-2N7Vic45sbAegA5fhdfDjVbEVS4r+ze+tTQs2/wkY+8fC5yAGHfCM5ocyoTfBN5m7EhznC3AyMsOy4hLPzHFSQ==}
-    engines: {node: 10.* || 12.* || >= 14.*}
+  ember-try@3.0.0:
+    resolution: {integrity: sha512-ZYVKYWMnrHSD3vywo7rV76kPCOC9ATIEnGGG/PEKfCcFE0lB26jltRDnOrhORfLKq0JFp62fFxC/4940U+MwRQ==}
+    engines: {node: 16.* || >= 18.*}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -3267,6 +3267,9 @@ packages:
 
   fs-extra@5.0.0:
     resolution: {integrity: sha512-66Pm4RYbjzdyeuqudYqhFiNBbCIuI9kgRqLPSHIlXHidW8NIQtVdkM1yeZ4lXwuhbTETv3EUGMNHAAw6hiundQ==}
+
+  fs-extra@6.0.1:
+    resolution: {integrity: sha512-GnyIkKhhzXZUWFCaJzvyDLEEgDkPfb4/TPvJCJVuS8MWZgoSsErf++QpiAlDnKFcqhRlm+tIOcencCjyJE6ZCA==}
 
   fs-extra@7.0.1:
     resolution: {integrity: sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==}
@@ -8478,7 +8481,7 @@ snapshots:
     dependencies:
       ansi-align: 3.0.1
       camelcase: 7.0.1
-      chalk: 5.2.0
+      chalk: 5.4.1
       cli-boxes: 3.0.0
       string-width: 5.1.2
       type-fest: 2.19.0
@@ -10149,7 +10152,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  ember-try@2.0.0(encoding@0.1.13):
+  ember-try@3.0.0(encoding@0.1.13):
     dependencies:
       chalk: 4.1.2
       cli-table3: 0.6.5
@@ -10157,9 +10160,10 @@ snapshots:
       debug: 4.4.0
       ember-try-config: 4.0.0(encoding@0.1.13)
       execa: 4.1.0
-      fs-extra: 9.1.0
+      fs-extra: 6.0.1
       resolve: 1.22.10
       rimraf: 3.0.2
+      semver: 7.7.1
       walk-sync: 2.2.0
     transitivePeerDependencies:
       - encoding
@@ -10896,6 +10900,12 @@ snapshots:
       jsonfile: 4.0.0
       universalify: 0.1.2
 
+  fs-extra@6.0.1:
+    dependencies:
+      graceful-fs: 4.2.11
+      jsonfile: 4.0.0
+      universalify: 0.1.2
+
   fs-extra@7.0.1:
     dependencies:
       graceful-fs: 4.2.11
@@ -11508,7 +11518,7 @@ snapshots:
   inquirer@9.2.6:
     dependencies:
       ansi-escapes: 4.3.2
-      chalk: 5.2.0
+      chalk: 5.4.1
       cli-cursor: 3.1.0
       cli-width: 4.1.0
       external-editor: 3.1.0
@@ -12089,7 +12099,7 @@ snapshots:
 
   log-symbols@5.1.0:
     dependencies:
-      chalk: 5.2.0
+      chalk: 5.4.1
       is-unicode-supported: 1.3.0
 
   lower-case@2.0.2:
@@ -12783,7 +12793,7 @@ snapshots:
 
   ora@6.3.1:
     dependencies:
-      chalk: 5.2.0
+      chalk: 5.4.1
       cli-cursor: 4.0.0
       cli-spinners: 2.9.2
       is-interactive: 2.0.0
@@ -12911,7 +12921,7 @@ snapshots:
       got: 12.6.1
       registry-auth-token: 5.1.0
       registry-url: 6.0.1
-      semver: 7.5.1
+      semver: 7.7.1
 
   parent-module@1.0.1:
     dependencies:
@@ -13589,7 +13599,7 @@ snapshots:
 
   semver-diff@4.0.0:
     dependencies:
-      semver: 7.5.1
+      semver: 7.7.1
 
   semver@5.7.2: {}
 
@@ -14522,7 +14532,7 @@ snapshots:
   update-notifier@6.0.2:
     dependencies:
       boxen: 7.1.1
-      chalk: 5.2.0
+      chalk: 5.4.1
       configstore: 6.0.0
       has-yarn: 3.0.0
       import-lazy: 4.0.0
@@ -14532,7 +14542,7 @@ snapshots:
       is-yarn-global: 0.4.1
       latest-version: 7.0.0
       pupa: 3.1.0
-      semver: 7.5.1
+      semver: 7.7.1
       semver-diff: 4.0.0
       xdg-basedir: 5.1.0
 
