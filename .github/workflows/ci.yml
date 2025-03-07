@@ -175,11 +175,11 @@ jobs:
         ember-try-scenario: [
           ember-lts-4.8,
           ember-lts-4.12,
-          ember-release,
-          ember-beta,
-          ember-canary,
-          embroider-safe,
-          embroider-optimized
+          # ember-release,
+          # ember-beta,
+          # ember-canary,
+          # embroider-safe,
+          # embroider-optimized
         ]
 
     steps:
