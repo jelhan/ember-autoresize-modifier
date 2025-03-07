@@ -2,7 +2,6 @@
 
 Element Modifier that resizes a `<textarea>` accordingly to the input.
 
-
 ## Compatibility
 
 * Ember.js v4.8 or above
@@ -14,7 +13,6 @@ Element Modifier that resizes a `<textarea>` accordingly to the input.
 ```sh
 ember install ember-autoresize-modifier
 ```
-
 
 ## Usage
 
@@ -47,11 +45,9 @@ Known Limitations
 - Element Modifiers are not executed in server-side rendering / FastBoot. The
   textarea won't be resized until rehydration.
 
-
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
-
 
 ## License
 
