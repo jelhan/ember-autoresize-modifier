@@ -56,7 +56,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-<<<<<<< HEAD
         try-scenario:
           - ember-lts-4.8
           - ember-lts-4.12
@@ -65,17 +64,6 @@ jobs:
           # - ember-canary
           # - embroider-safe
           # - embroider-optimized
-=======
-        ember-try-scenario: [
-          ember-lts-4.8,
-          ember-lts-4.12,
-          # ember-release,
-          # ember-beta,
-          # ember-canary,
-          # embroider-safe,
-          # embroider-optimized
-        ]
->>>>>>> origin/master
 
     steps:
       - uses: actions/checkout@v3
