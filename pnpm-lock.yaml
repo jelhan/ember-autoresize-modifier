@@ -48,6 +48,9 @@ importers:
       '@glimmer/tracking':
         specifier: 1.1.2
         version: 1.1.2
+      '@release-it-plugins/lerna-changelog':
+        specifier: ^7.0.0
+        version: 7.0.0(release-it@18.1.2(@types/node@22.13.9))
       broccoli-asset-rev:
         specifier: 3.0.0
         version: 3.0.0
@@ -138,9 +141,6 @@ importers:
       release-it:
         specifier: 18.1.2
         version: 18.1.2(@types/node@22.13.9)
-      release-it-lerna-changelog:
-        specifier: 5.0.0
-        version: 5.0.0(release-it@18.1.2(@types/node@22.13.9))
       stylelint:
         specifier: 16.15.0
         version: 16.15.0
@@ -1218,6 +1218,12 @@ packages:
     resolution: {integrity: sha512-7ls1R6//+GPYD9vof1XaL5psViv83CwpdwlS8oUkWldYgbPhzZ3WgxIQMWqGyBmWPmoBfQg8C7jj7KI/ZuDHhQ==}
     peerDependencies:
       prettier: ^3.0.0
+
+  '@release-it-plugins/lerna-changelog@7.0.0':
+    resolution: {integrity: sha512-IGHKdcUCyQ5ibtfkF2AQNMrMtyWF1aigic/ZWHPbD77B2zCcymzsyzVskhrGnHVeZGoOOG3vqGuE6U2INz8k6w==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      release-it: ^14.0.0 || ^15.1.3 || ^16.0.0 || ^17.0.0
 
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
@@ -4332,9 +4338,6 @@ packages:
   lodash._isiterateecall@3.0.9:
     resolution: {integrity: sha512-De+ZbrMu6eThFti/CSzhRvTKMgQToLxbij58LMfM8JnYDNSOjkjTCIaa8ixglOeGh2nyPlakbt5bJWJ7gvpYlQ==}
 
-  lodash._reinterpolate@3.0.0:
-    resolution: {integrity: sha512-xYHt68QRoYGjeeM/XOE1uJtvXQAgvszfBhjV4yvsQH0u2i9I6cI6c6/eG4Hh3UAOVn0y/xAXwmTzEay49Q//HA==}
-
   lodash.camelcase@4.3.0:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
 
@@ -4377,13 +4380,6 @@ packages:
   lodash.omit@4.5.0:
     resolution: {integrity: sha512-XeqSp49hNGmlkj2EJlfrQFIzQ6lXdNro9sddtQzcJY8QaoC2GO0DT7xaIokHeyM+mIT0mPMlPvkYzg2xCuHdZg==}
     deprecated: This package is deprecated. Use destructuring assignment syntax instead.
-
-  lodash.template@4.5.0:
-    resolution: {integrity: sha512-84vYFxIkmidUiFxidA/KjjH9pAycqW+h980j7Fuz5qxRtO9pgB7MDFTdys1N7A5mcucRiDyEq4fusljItR1T/A==}
-    deprecated: This package is deprecated. Use https://socket.dev/npm/package/eta instead.
-
-  lodash.templatesettings@4.2.0:
-    resolution: {integrity: sha512-stgLz+i3Aa9mZgnjr/O+v9ruKZsPsndy7qPZOchbqk2cnTU1ZaldKK+v7m54WoKIyxiuMZTKT2H81F8BeAc3ZQ==}
 
   lodash.truncate@4.4.2:
     resolution: {integrity: sha512-jttmRe7bRse52OsWIMDLaXxWqRAmtIUccAQ3garviCqJjafXOfNMO0yMfNpdD6zbGaTU0P5Nz7e7gAT6cKmJRw==}
@@ -5458,13 +5454,6 @@ packages:
   regjsparser@0.12.0:
     resolution: {integrity: sha512-cnE+y8bz4NhMjISKbgeVJtqNbtf5QpjZP+Bslo+UqkIt9QPnX9q095eiRRASJG1/tz6dlNr6Z5NsBiWYokp6EQ==}
     hasBin: true
-
-  release-it-lerna-changelog@5.0.0:
-    resolution: {integrity: sha512-s/rHzwAwp878bivWKsJKNya9SRVKYZjgpyyGzg5ddBKZY5u5lhTWhxHtld7mHTRg4azIN7YypPH3rGaOfVmNVw==}
-    engines: {node: ^14.13.1 || >= 16}
-    deprecated: This package has been renamed to @release-it-plugins/lerna-changelog
-    peerDependencies:
-      release-it: ^14.0.0 || ^15.1.3
 
   release-it@18.1.2:
     resolution: {integrity: sha512-HOVRcicehCgoCsPFOu0iCBlEC8GDOoKS5s6ICkWmqomGEoZtRQ88D3RCsI5MciSU8vAQU+aWZW2z57NQNNb74w==}
@@ -8002,6 +7991,20 @@ snapshots:
   '@prettier/sync@0.2.1(prettier@3.5.3)':
     dependencies:
       prettier: 3.5.3
+
+  '@release-it-plugins/lerna-changelog@7.0.0(release-it@18.1.2(@types/node@22.13.9))':
+    dependencies:
+      execa: 5.1.1
+      lerna-changelog: 2.2.0
+      lodash: 4.17.21
+      mdast-util-from-markdown: 1.3.1
+      release-it: 18.1.2(@types/node@22.13.9)
+      tmp: 0.2.3
+      validate-peer-dependencies: 2.2.0
+      which: 2.0.2
+    transitivePeerDependencies:
+      - bluebird
+      - supports-color
 
   '@sec-ant/readable-stream@0.4.1': {}
 
@@ -11983,8 +11986,6 @@ snapshots:
 
   lodash._isiterateecall@3.0.9: {}
 
-  lodash._reinterpolate@3.0.0: {}
-
   lodash.camelcase@4.3.0: {}
 
   lodash.capitalize@4.2.1: {}
@@ -12017,15 +12018,6 @@ snapshots:
   lodash.merge@4.6.2: {}
 
   lodash.omit@4.5.0: {}
-
-  lodash.template@4.5.0:
-    dependencies:
-      lodash._reinterpolate: 3.0.0
-      lodash.templatesettings: 4.2.0
-
-  lodash.templatesettings@4.2.0:
-    dependencies:
-      lodash._reinterpolate: 3.0.0
 
   lodash.truncate@4.4.2: {}
 
@@ -13200,20 +13192,6 @@ snapshots:
   regjsparser@0.12.0:
     dependencies:
       jsesc: 3.0.2
-
-  release-it-lerna-changelog@5.0.0(release-it@18.1.2(@types/node@22.13.9)):
-    dependencies:
-      execa: 5.1.1
-      lerna-changelog: 2.2.0
-      lodash.template: 4.5.0
-      mdast-util-from-markdown: 1.3.1
-      release-it: 18.1.2(@types/node@22.13.9)
-      tmp: 0.2.3
-      validate-peer-dependencies: 2.2.0
-      which: 2.0.2
-    transitivePeerDependencies:
-      - bluebird
-      - supports-color
 
   release-it@18.1.2(@types/node@22.13.9):
     dependencies:
