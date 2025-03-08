@@ -139,8 +139,8 @@ importers:
         specifier: 37.0.0
         version: 37.0.0(stylelint@16.15.0)
       stylelint-prettier:
-        specifier: 4.1.0
-        version: 4.1.0(prettier@3.5.3)(stylelint@16.15.0)
+        specifier: 5.0.3
+        version: 5.0.3(prettier@3.5.3)(stylelint@16.15.0)
       webpack:
         specifier: 5.98.0
         version: 5.98.0
@@ -6005,12 +6005,12 @@ packages:
     peerDependencies:
       stylelint: ^16.13.0
 
-  stylelint-prettier@4.1.0:
-    resolution: {integrity: sha512-dd653q/d1IfvsSQshz1uAMe+XDm6hfM/7XiFH0htYY8Lse/s5ERTg7SURQehZPwVvm/rs7AsFhda9EQ2E9TS0g==}
-    engines: {node: ^14.17.0 || >=16.0.0}
+  stylelint-prettier@5.0.3:
+    resolution: {integrity: sha512-B6V0oa35ekRrKZlf+6+jA+i50C4GXJ7X1PPmoCqSUoXN6BrNF6NhqqhanvkLjqw2qgvrS0wjdpeC+Tn06KN3jw==}
+    engines: {node: '>=18.12.0'}
     peerDependencies:
       prettier: '>=3.0.0'
-      stylelint: '>=15.8.0'
+      stylelint: '>=16.0.0'
 
   stylelint@16.15.0:
     resolution: {integrity: sha512-OK6Rs7EPdcdmjqiDycadZY4fw3f5/TC1X6/tGjnF3OosbwCeNs7nG+79MCAtjEg7ckwqTJTsku08e0Rmaz5nUw==}
@@ -13829,7 +13829,7 @@ snapshots:
       stylelint: 16.15.0
       stylelint-config-recommended: 15.0.0(stylelint@16.15.0)
 
-  stylelint-prettier@4.1.0(prettier@3.5.3)(stylelint@16.15.0):
+  stylelint-prettier@5.0.3(prettier@3.5.3)(stylelint@16.15.0):
     dependencies:
       prettier: 3.5.3
       prettier-linter-helpers: 1.0.0
