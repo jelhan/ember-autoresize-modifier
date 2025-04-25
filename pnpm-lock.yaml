@@ -142,14 +142,14 @@ importers:
         specifier: 17.11.0
         version: 17.11.0
       stylelint:
-        specifier: 16.19.0
-        version: 16.19.0
+        specifier: 16.19.1
+        version: 16.19.1
       stylelint-config-standard:
         specifier: 38.0.0
-        version: 38.0.0(stylelint@16.19.0)
+        version: 38.0.0(stylelint@16.19.1)
       stylelint-prettier:
         specifier: 5.0.3
-        version: 5.0.3(prettier@3.5.3)(stylelint@16.19.0)
+        version: 5.0.3(prettier@3.5.3)(stylelint@16.19.1)
       webpack:
         specifier: 5.99.7
         version: 5.99.7
@@ -5889,8 +5889,8 @@ packages:
       prettier: '>=3.0.0'
       stylelint: '>=16.0.0'
 
-  stylelint@16.19.0:
-    resolution: {integrity: sha512-BJzc5mo/ez0H/ZSl3UbxGdkK/s0kFGsF5/k6IGu4z8wJ1qp49WrOS9RxswvcN6HMirt0g/iiJqOwLHTbWv49IQ==}
+  stylelint@16.19.1:
+    resolution: {integrity: sha512-C1SlPZNMKl+d/C867ZdCRthrS+6KuZ3AoGW113RZCOL0M8xOGpgx7G70wq7lFvqvm4dcfdGFVLB/mNaLFChRKw==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -13550,22 +13550,22 @@ snapshots:
 
   styled_string@0.0.1: {}
 
-  stylelint-config-recommended@16.0.0(stylelint@16.19.0):
+  stylelint-config-recommended@16.0.0(stylelint@16.19.1):
     dependencies:
-      stylelint: 16.19.0
+      stylelint: 16.19.1
 
-  stylelint-config-standard@38.0.0(stylelint@16.19.0):
+  stylelint-config-standard@38.0.0(stylelint@16.19.1):
     dependencies:
-      stylelint: 16.19.0
-      stylelint-config-recommended: 16.0.0(stylelint@16.19.0)
+      stylelint: 16.19.1
+      stylelint-config-recommended: 16.0.0(stylelint@16.19.1)
 
-  stylelint-prettier@5.0.3(prettier@3.5.3)(stylelint@16.19.0):
+  stylelint-prettier@5.0.3(prettier@3.5.3)(stylelint@16.19.1):
     dependencies:
       prettier: 3.5.3
       prettier-linter-helpers: 1.0.0
-      stylelint: 16.19.0
+      stylelint: 16.19.1
 
-  stylelint@16.19.0:
+  stylelint@16.19.1:
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer': 3.0.3
