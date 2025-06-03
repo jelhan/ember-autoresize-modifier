@@ -35,7 +35,7 @@
     "ember-modifier": "^3.0.0 || ^4.0.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.27.1",
+    "@babel/eslint-parser": "7.27.5",
     "@babel/plugin-proposal-decorators": "7.27.1",
     "@ember/optional-features": "2.2.0",
     "@ember/test-helpers": "5.2.2",
