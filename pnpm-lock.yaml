@@ -94,11 +94,11 @@ importers:
         specifier: 3.0.0
         version: 3.0.0(encoding@0.1.13)
       ember-template-lint:
-        specifier: 7.9.1
-        version: 7.9.1
+        specifier: 7.9.2
+        version: 7.9.2
       ember-template-lint-plugin-prettier:
         specifier: 5.0.0
-        version: 5.0.0(ember-template-lint@7.9.1)(prettier@3.6.2)
+        version: 5.0.0(ember-template-lint@7.9.2)(prettier@3.6.2)
       ember-try:
         specifier: 4.0.0
         version: 4.0.0(encoding@0.1.13)
@@ -2662,8 +2662,8 @@ packages:
       ember-template-lint: '>= 4.0.0'
       prettier: '>= 3.0.0'
 
-  ember-template-lint@7.9.1:
-    resolution: {integrity: sha512-uh5WU2sJKkQgDgIQovwv1D0fw2/RJnmyAHqIhaTYk68CfKQ/O5v31c1iXNu71qv3xeONi3QPl/rBW0EMdIFXWA==}
+  ember-template-lint@7.9.2:
+    resolution: {integrity: sha512-j2vt1laRRn1yipSrVm6+E2UbVrERTDoX/ye66Kc+FtI+W+SJSAuEPvMA+t2sofkqvP0u+TEg8Bc66YbShblAgg==}
     engines: {node: ^18.18.0 || >= 20.9.0}
     hasBin: true
 
@@ -9665,14 +9665,14 @@ snapshots:
       - rsvp
       - supports-color
 
-  ember-template-lint-plugin-prettier@5.0.0(ember-template-lint@7.9.1)(prettier@3.6.2):
+  ember-template-lint-plugin-prettier@5.0.0(ember-template-lint@7.9.2)(prettier@3.6.2):
     dependencies:
       '@prettier/sync': 0.2.1(prettier@3.6.2)
-      ember-template-lint: 7.9.1
+      ember-template-lint: 7.9.2
       prettier: 3.6.2
       prettier-linter-helpers: 1.0.0
 
-  ember-template-lint@7.9.1:
+  ember-template-lint@7.9.2:
     dependencies:
       '@lint-todo/utils': 13.1.1
       content-tag: 3.1.3
