@@ -34,8 +34,8 @@ importers:
         specifier: 2.2.0
         version: 2.2.0
       '@ember/test-helpers':
-        specifier: 5.2.2
-        version: 5.2.2(@babel/core@7.28.4)
+        specifier: 5.3.0
+        version: 5.3.0(@babel/core@7.28.4)
       '@embroider/test-setup':
         specifier: 4.0.0
         version: 4.0.0
@@ -83,7 +83,7 @@ importers:
         version: 9.0.3
       ember-qunit:
         specifier: 9.0.3
-        version: 9.0.3(@ember/test-helpers@5.2.2(@babel/core@7.28.4))(qunit@2.24.1)
+        version: 9.0.3(@ember/test-helpers@5.3.0(@babel/core@7.28.4))(qunit@2.24.1)
       ember-resolver:
         specifier: 13.1.1
         version: 13.1.1
@@ -779,8 +779,8 @@ packages:
     resolution: {integrity: sha512-a1OQ+w9vDvMXd9BNA9r779yr8MAPguGaMGbIeTMPWACeWBdD6bACBB5iKE3gNyrJAYKMq2wab6BKmRFS3Qw3hw==}
     engines: {node: 10.* || 12.* || >= 14}
 
-  '@ember/test-helpers@5.2.2':
-    resolution: {integrity: sha512-Cclqeh0j6RnYvoaElAVC3Nd1fsSUkc3oUTwTsLlNiC3riyPq8lNYxh96VM59/yji2ntrd/cJQ7qhhSZWd6hsEw==}
+  '@ember/test-helpers@5.3.0':
+    resolution: {integrity: sha512-CG3Iiap0vbrjtOzRg4cN0fd7fMUVhFK5gURkc8yQGJtKT3LwXLLtCLkMG/A55sMTIYHlYRETuJXqv9slO90RKw==}
 
   '@ember/test-waiters@4.1.1':
     resolution: {integrity: sha512-HbK70JYCDJcGI0CrwcbjeL2QHAn0HLwa3oGep7mr6l/yO95U7JYA8VN+/9VTsWJTmKueLtWayUqEmGS3a3mVOg==}
@@ -7194,7 +7194,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ember/test-helpers@5.2.2(@babel/core@7.28.4)':
+  '@ember/test-helpers@5.3.0(@babel/core@7.28.4)':
     dependencies:
       '@ember/test-waiters': 4.1.1
       '@embroider/addon-shim': 1.10.0
@@ -9656,9 +9656,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-qunit@9.0.3(@ember/test-helpers@5.2.2(@babel/core@7.28.4))(qunit@2.24.1):
+  ember-qunit@9.0.3(@ember/test-helpers@5.3.0(@babel/core@7.28.4))(qunit@2.24.1):
     dependencies:
-      '@ember/test-helpers': 5.2.2(@babel/core@7.28.4)
+      '@ember/test-helpers': 5.3.0(@babel/core@7.28.4)
       '@embroider/addon-shim': 1.10.0
       '@embroider/macros': 1.18.1
       qunit: 2.24.1
