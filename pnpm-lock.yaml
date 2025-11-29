@@ -98,7 +98,7 @@ importers:
         version: 7.9.3
       ember-template-lint-plugin-prettier:
         specifier: 5.0.0
-        version: 5.0.0(ember-template-lint@7.9.3)(prettier@3.7.1)
+        version: 5.0.0(ember-template-lint@7.9.3)(prettier@3.7.2)
       ember-try:
         specifier: 4.0.0
         version: 4.0.0(encoding@0.1.13)
@@ -116,7 +116,7 @@ importers:
         version: 17.23.1(eslint@9.39.1)(typescript@5.9.3)
       eslint-plugin-prettier:
         specifier: 5.5.4
-        version: 5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.1))(eslint@9.39.1)(prettier@3.7.1)
+        version: 5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.1))(eslint@9.39.1)(prettier@3.7.2)
       eslint-plugin-qunit:
         specifier: 8.2.5
         version: 8.2.5(eslint@9.39.1)
@@ -127,11 +127,11 @@ importers:
         specifier: 4.7.0
         version: 4.7.0
       prettier:
-        specifier: 3.7.1
-        version: 3.7.1
+        specifier: 3.7.2
+        version: 3.7.2
       prettier-plugin-ember-template-tag:
         specifier: 2.1.0
-        version: 2.1.0(prettier@3.7.1)
+        version: 2.1.0(prettier@3.7.2)
       qunit:
         specifier: 2.24.2
         version: 2.24.2
@@ -149,7 +149,7 @@ importers:
         version: 39.0.1(stylelint@16.26.1(typescript@5.9.3))
       stylelint-prettier:
         specifier: 5.0.3
-        version: 5.0.3(prettier@3.7.1)(stylelint@16.26.1(typescript@5.9.3))
+        version: 5.0.3(prettier@3.7.2)(stylelint@16.26.1(typescript@5.9.3))
       webpack:
         specifier: 5.103.0
         version: 5.103.0
@@ -5068,8 +5068,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.7.1:
-    resolution: {integrity: sha512-RWKXE4qB3u5Z6yz7omJkjWwmTfLdcbv44jUVHC5NpfXwFGzvpQM798FGv/6WNK879tc+Cn0AAyherCl1KjbyZQ==}
+  prettier@3.7.2:
+    resolution: {integrity: sha512-n3HV2J6QhItCXndGa3oMWvWFAgN1ibnS7R9mt6iokScBOC0Ul9/iZORmU2IWUMcyAQaMPjTlY3uT34TqocUxMA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -7720,9 +7720,9 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@prettier/sync@0.2.1(prettier@3.7.1)':
+  '@prettier/sync@0.2.1(prettier@3.7.2)':
     dependencies:
-      prettier: 3.7.1
+      prettier: 3.7.2
 
   '@release-it-plugins/lerna-changelog@8.0.1(release-it@17.11.0(typescript@5.9.3))':
     dependencies:
@@ -9844,11 +9844,11 @@ snapshots:
       - rsvp
       - supports-color
 
-  ember-template-lint-plugin-prettier@5.0.0(ember-template-lint@7.9.3)(prettier@3.7.1):
+  ember-template-lint-plugin-prettier@5.0.0(ember-template-lint@7.9.3)(prettier@3.7.2):
     dependencies:
-      '@prettier/sync': 0.2.1(prettier@3.7.1)
+      '@prettier/sync': 0.2.1(prettier@3.7.2)
       ember-template-lint: 7.9.3
-      prettier: 3.7.1
+      prettier: 3.7.2
       prettier-linter-helpers: 1.0.0
 
   ember-template-lint@7.9.3:
@@ -10092,10 +10092,10 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  eslint-plugin-prettier@5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.1))(eslint@9.39.1)(prettier@3.7.1):
+  eslint-plugin-prettier@5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.1))(eslint@9.39.1)(prettier@3.7.2):
     dependencies:
       eslint: 9.39.1
-      prettier: 3.7.1
+      prettier: 3.7.2
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.11
     optionalDependencies:
@@ -12569,17 +12569,17 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier-plugin-ember-template-tag@2.1.0(prettier@3.7.1):
+  prettier-plugin-ember-template-tag@2.1.0(prettier@3.7.2):
     dependencies:
       '@babel/core': 7.28.5
       content-tag: 4.0.0
-      prettier: 3.7.1
+      prettier: 3.7.2
     transitivePeerDependencies:
       - supports-color
 
   prettier@2.8.8: {}
 
-  prettier@3.7.1: {}
+  prettier@3.7.2: {}
 
   printf@0.6.1: {}
 
@@ -13463,9 +13463,9 @@ snapshots:
       stylelint: 16.26.1(typescript@5.9.3)
       stylelint-config-recommended: 17.0.0(stylelint@16.26.1(typescript@5.9.3))
 
-  stylelint-prettier@5.0.3(prettier@3.7.1)(stylelint@16.26.1(typescript@5.9.3)):
+  stylelint-prettier@5.0.3(prettier@3.7.2)(stylelint@16.26.1(typescript@5.9.3)):
     dependencies:
-      prettier: 3.7.1
+      prettier: 3.7.2
       prettier-linter-helpers: 1.0.0
       stylelint: 16.26.1(typescript@5.9.3)
 
