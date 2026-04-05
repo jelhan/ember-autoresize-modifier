@@ -55,7 +55,7 @@ export default [
       '.prettierrc.js',
       '.stylelintrc.js',
       '.template-lintrc.js',
-      'index.js',
+      'addon-main.js',
     ],
     plugins: {
       n,
