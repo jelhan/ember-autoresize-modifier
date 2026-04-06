@@ -1,6 +1,10 @@
 {
   "private": true,
   "workspaces": ["addon", "test-app"],
+  "scripts": {
+    "build": "pnpm --filter ember-autoresize-modifier build",
+    "prepare": "pnpm build"
+  },
   "pnpm": {
     "overrides": {
       "testem": "3.18.0"
