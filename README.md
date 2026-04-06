@@ -4,8 +4,8 @@ Element Modifier that resizes a `<textarea>` accordingly to the input.
 
 > **Note**: Resizing textareas to fit their content is supported by the
 > CSS [`field-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/field-sizing)
-> feature natively. As of the time writing this note (November 2025)
-> the feature is supported by Google Chrome and Microsoft Edge. This
+> feature natively. As of the time writing this note (April 2026),
+> the feature is supported by Google Chrome, Microsoft Edge, and Safari. This
 > modifier should only be used until all your targeted browsers
 > support the feature.
 
