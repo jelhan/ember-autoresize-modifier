@@ -1,9 +1,19 @@
 {
   "private": true,
-  "workspaces": ["addon", "test-app"],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jelhan/ember-autoresize-modifier.git"
+  },
+  "workspaces": [
+    "addon",
+    "test-app"
+  ],
   "scripts": {
     "build": "pnpm --filter ember-autoresize-modifier build",
     "prepare": "pnpm build"
+  },
+  "devDependencies": {
+    "release-plan": "^0.17.4"
   },
   "pnpm": {
     "overrides": {
