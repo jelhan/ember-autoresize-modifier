@@ -1,0 +1,22 @@
+{
+  "solution": {
+    "ember-autoresize-modifier": {
+      "impact": "minor",
+      "oldVersion": "0.8.0",
+      "newVersion": "0.9.0",
+      "tagName": "latest",
+      "constraints": [
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
+        }
+      ],
+      "pkgJSONPath": "./addon/package.json"
+    }
+  },
+  "description": "## Release (2026-04-06)\n\n* ember-autoresize-modifier 0.9.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-autoresize-modifier`\n  * [#269](https://github.com/jelhan/ember-autoresize-modifier/pull/269) Convert to addon v2 ([@tniezurawski](https://github.com/tniezurawski))\n\n#### :memo: Documentation\n* [#270](https://github.com/jelhan/ember-autoresize-modifier/pull/270) Document Safari support for native CSS feature ([@jelhan](https://github.com/jelhan))\n\n#### :house: Internal\n* `ember-autoresize-modifier`\n  * [#279](https://github.com/jelhan/ember-autoresize-modifier/pull/279) Use release-plan and trusted publishing as replacement for release-it and local publishing ([@jelhan](https://github.com/jelhan))\n  * [#274](https://github.com/jelhan/ember-autoresize-modifier/pull/274) Upgrade to Node 24 ([@jelhan](https://github.com/jelhan))\n  * [#271](https://github.com/jelhan/ember-autoresize-modifier/pull/271) readme and license should be part of published package ([@jelhan](https://github.com/jelhan))\n* Other\n  * [#278](https://github.com/jelhan/ember-autoresize-modifier/pull/278) disable tests for ember-canary and ember-beta due to broken Ember 7 compatibility ([@jelhan](https://github.com/jelhan))\n  * [#277](https://github.com/jelhan/ember-autoresize-modifier/pull/277) ensure test-app runs against local addon and not published version ([@jelhan](https://github.com/jelhan))\n  * [#259](https://github.com/jelhan/ember-autoresize-modifier/pull/259) fix dummy app used for manual debugging ([@jelhan](https://github.com/jelhan))\n\n#### Committers: 2\n- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))\n- Tomek Nieżurawski ([@tniezurawski](https://github.com/tniezurawski))\n"
+}

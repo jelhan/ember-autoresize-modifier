@@ -1,5 +1,30 @@
 # Changelog
 
+## Release (2026-04-06)
+
+* ember-autoresize-modifier 0.9.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-autoresize-modifier`
+  * [#269](https://github.com/jelhan/ember-autoresize-modifier/pull/269) Convert to addon v2 ([@tniezurawski](https://github.com/tniezurawski))
+
+#### :memo: Documentation
+* [#270](https://github.com/jelhan/ember-autoresize-modifier/pull/270) Document Safari support for native CSS feature ([@jelhan](https://github.com/jelhan))
+
+#### :house: Internal
+* `ember-autoresize-modifier`
+  * [#279](https://github.com/jelhan/ember-autoresize-modifier/pull/279) Use release-plan and trusted publishing as replacement for release-it and local publishing ([@jelhan](https://github.com/jelhan))
+  * [#274](https://github.com/jelhan/ember-autoresize-modifier/pull/274) Upgrade to Node 24 ([@jelhan](https://github.com/jelhan))
+  * [#271](https://github.com/jelhan/ember-autoresize-modifier/pull/271) readme and license should be part of published package ([@jelhan](https://github.com/jelhan))
+* Other
+  * [#278](https://github.com/jelhan/ember-autoresize-modifier/pull/278) disable tests for ember-canary and ember-beta due to broken Ember 7 compatibility ([@jelhan](https://github.com/jelhan))
+  * [#277](https://github.com/jelhan/ember-autoresize-modifier/pull/277) ensure test-app runs against local addon and not published version ([@jelhan](https://github.com/jelhan))
+  * [#259](https://github.com/jelhan/ember-autoresize-modifier/pull/259) fix dummy app used for manual debugging ([@jelhan](https://github.com/jelhan))
+
+#### Committers: 2
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+- Tomek Nieżurawski ([@tniezurawski](https://github.com/tniezurawski))
+
 ## v0.8.0 (2025-03-08)
 
 #### :boom: Breaking Change
