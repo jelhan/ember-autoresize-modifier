@@ -13,7 +13,7 @@
     "prepare": "pnpm build"
   },
   "devDependencies": {
-    "release-plan": "^0.17.4"
+    "release-plan": "0.17.4"
   },
   "pnpm": {
     "overrides": {
