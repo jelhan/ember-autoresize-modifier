@@ -135,8 +135,8 @@ importers:
         specifier: 2.13.1
         version: 2.13.1(webpack@5.105.4)
       ember-autoresize-modifier:
-        specifier: 0.8.0
-        version: 0.8.0(ember-source@6.11.1(@glimmer/component@2.0.0)(rsvp@4.8.5))(webpack@5.105.4)
+        specifier: workspace:*
+        version: link:../addon
       ember-cli:
         specifier: 6.9.1
         version: 6.9.1(@types/node@25.5.2)(handlebars@4.7.9)(underscore@1.13.8)
@@ -1299,79 +1299,66 @@ packages:
     resolution: {integrity: sha512-L+34Qqil+v5uC0zEubW7uByo78WOCIrBvci69E7sFASRl0X7b/MB6Cqd1lky/CtcSVTydWa2WZwFuWexjS5o6g==}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.60.1':
     resolution: {integrity: sha512-n83O8rt4v34hgFzlkb1ycniJh7IR5RCIqt6mz1VRJD6pmhRi0CXdmfnLu9dIUS6buzh60IvACM842Ffb3xd6Gg==}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.60.1':
     resolution: {integrity: sha512-Nql7sTeAzhTAja3QXeAI48+/+GjBJ+QmAH13snn0AJSNL50JsDqotyudHyMbO2RbJkskbMbFJfIJKWA6R1LCJQ==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.60.1':
     resolution: {integrity: sha512-+pUymDhd0ys9GcKZPPWlFiZ67sTWV5UU6zOJat02M1+PiuSGDziyRuI/pPue3hoUwm2uGfxdL+trT6Z9rxnlMA==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-loong64-gnu@4.60.1':
     resolution: {integrity: sha512-VSvgvQeIcsEvY4bKDHEDWcpW4Yw7BtlKG1GUT4FzBUlEKQK0rWHYBqQt6Fm2taXS+1bXvJT6kICu5ZwqKCnvlQ==}
     cpu: [loong64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-loong64-musl@4.60.1':
     resolution: {integrity: sha512-4LqhUomJqwe641gsPp6xLfhqWMbQV04KtPp7/dIp0nzPxAkNY1AbwL5W0MQpcalLYk07vaW9Kp1PBhdpZYYcEw==}
     cpu: [loong64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-ppc64-gnu@4.60.1':
     resolution: {integrity: sha512-tLQQ9aPvkBxOc/EUT6j3pyeMD6Hb8QF2BTBnCQWP/uu1lhc9AIrIjKnLYMEroIz/JvtGYgI9dF3AxHZNaEH0rw==}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-ppc64-musl@4.60.1':
     resolution: {integrity: sha512-RMxFhJwc9fSXP6PqmAz4cbv3kAyvD1etJFjTx4ONqFP9DkTkXsAMU4v3Vyc5BgzC+anz7nS/9tp4obsKfqkDHg==}
     cpu: [ppc64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-riscv64-gnu@4.60.1':
     resolution: {integrity: sha512-QKgFl+Yc1eEk6MmOBfRHYF6lTxiiiV3/z/BRrbSiW2I7AFTXoBFvdMEyglohPj//2mZS4hDOqeB0H1ACh3sBbg==}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-musl@4.60.1':
     resolution: {integrity: sha512-RAjXjP/8c6ZtzatZcA1RaQr6O1TRhzC+adn8YZDnChliZHviqIjmvFwHcxi4JKPSDAt6Uhf/7vqcBzQJy0PDJg==}
     cpu: [riscv64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-s390x-gnu@4.60.1':
     resolution: {integrity: sha512-wcuocpaOlaL1COBYiA89O6yfjlp3RwKDeTIA0hM7OpmhR1Bjo9j31G1uQVpDlTvwxGn2nQs65fBFL5UFd76FcQ==}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.60.1':
     resolution: {integrity: sha512-77PpsFQUCOiZR9+LQEFg9GClyfkNXj1MP6wRnzYs0EeWbPcHs02AXu4xuUbM1zhwn3wqaizle3AEYg5aeoohhg==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.60.1':
     resolution: {integrity: sha512-5cIATbk5vynAjqqmyBjlciMJl1+R/CwX9oLk/EyiFXDWd95KpHdrOJT//rnUl4cUcskrd0jCCw3wpZnhIHdD9w==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-openbsd-x64@4.60.1':
     resolution: {integrity: sha512-cl0w09WsCi17mcmWqqglez9Gk8isgeWvoUZ3WiJFYSR3zjBQc2J5/ihSjpl+VLjPqjQ/1hJRcqBfLjssREQILw==}
@@ -2774,12 +2761,6 @@ packages:
     resolution: {integrity: sha512-MjxJK2nfCJmmQI/rju2TrycmAa1AxmTarfvygbcrrgW0s4WeZHtbGXCO2z1lW9wfrShqeTo/o+3Mgk+9xcDTWg==}
     engines: {node: 12.* || 14.* || >= 16}
 
-  ember-autoresize-modifier@0.8.0:
-    resolution: {integrity: sha512-0x1v7/N0P8+I+Z6TSCFamXNFHnrRMl61wDrOrYVwp34Si5vjPHj2TcJxRoBZFndmQ21xN2tg9JTTYcuzJ6q3xA==}
-    engines: {node: 18.* || >= 20}
-    peerDependencies:
-      ember-source: '>=4.12.0'
-
   ember-cli-babel-plugin-helpers@1.1.1:
     resolution: {integrity: sha512-sKvOiPNHr5F/60NLd7SFzMpYPte/nnGkq/tMIfXejfKHIhaiIkYFqX8Z9UFTKWLLn+V7NOaby6niNPZUdvKCRw==}
     engines: {node: 6.* || 8.* || >= 10.*}
@@ -2802,10 +2783,6 @@ packages:
 
   ember-cli-get-component-path-option@1.0.0:
     resolution: {integrity: sha512-k47TDwcJ2zPideBCZE8sCiShSxQSpebY2BHcX2DdipMmBox5gsfyVrbKJWIHeSTTKyEUgmBIvQkqTOozEziCZA==}
-
-  ember-cli-htmlbars@6.3.0:
-    resolution: {integrity: sha512-N9Y80oZfcfWLsqickMfRd9YByVcTGyhYRnYQ2XVPVrp6jyUyOeRWmEAPh7ERSXpp8Ws4hr/JB9QVQrn/yZa+Ag==}
-    engines: {node: 12.* || 14.* || >= 16}
 
   ember-cli-htmlbars@7.0.1:
     resolution: {integrity: sha512-bNVAwTvBOmk7KjGCN0Vq81w8FAWQ1zXwCS1CUUHTeWdcFypRsv0qUEkTtwxho4H3BYaoqMCXPS45Js9WWtEXYw==}
@@ -9510,19 +9487,6 @@ snapshots:
       - supports-color
       - webpack
 
-  ember-autoresize-modifier@0.8.0(ember-source@6.11.1(@glimmer/component@2.0.0)(rsvp@4.8.5))(webpack@5.105.4):
-    dependencies:
-      '@babel/core': 7.29.0
-      ember-auto-import: 2.13.1(webpack@5.105.4)
-      ember-cli-babel: 8.3.1(@babel/core@7.29.0)
-      ember-cli-htmlbars: 6.3.0
-      ember-modifier: 4.3.0(@babel/core@7.29.0)
-      ember-source: 6.11.1(@glimmer/component@2.0.0)(rsvp@4.8.5)
-    transitivePeerDependencies:
-      - '@glint/template'
-      - supports-color
-      - webpack
-
   ember-cli-babel-plugin-helpers@1.1.1: {}
 
   ember-cli-babel@8.3.1(@babel/core@7.29.0):
@@ -9576,25 +9540,6 @@ snapshots:
       semver: 5.7.2
 
   ember-cli-get-component-path-option@1.0.0: {}
-
-  ember-cli-htmlbars@6.3.0:
-    dependencies:
-      '@ember/edition-utils': 1.2.0
-      babel-plugin-ember-template-compilation: 2.4.1
-      babel-plugin-htmlbars-inline-precompile: 5.3.1
-      broccoli-debug: 0.6.5
-      broccoli-persistent-filter: 3.1.3
-      broccoli-plugin: 4.0.7
-      ember-cli-version-checker: 5.1.2
-      fs-tree-diff: 2.0.1
-      hash-for-dep: 1.5.2
-      heimdalljs-logger: 0.1.10
-      js-string-escape: 1.0.1
-      semver: 7.7.4
-      silent-error: 1.1.1
-      walk-sync: 2.2.0
-    transitivePeerDependencies:
-      - supports-color
 
   ember-cli-htmlbars@7.0.1(@babel/core@7.29.0)(ember-source@6.11.1(@glimmer/component@2.0.0)(rsvp@4.8.5)):
     dependencies:
