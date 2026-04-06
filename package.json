@@ -17,7 +17,7 @@
   },
   "pnpm": {
     "overrides": {
-      "testem": "3.18.0"
+      "testem": "3.19.1"
     }
   }
 }
