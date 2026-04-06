@@ -24,7 +24,7 @@ importers:
         version: 6.11.1(@glimmer/component@2.0.0)(rsvp@4.8.5)
     devDependencies:
       '@babel/core':
-        specifier: ^7.26.7
+        specifier: 7.29.0
         version: 7.29.0
       '@babel/eslint-parser':
         specifier: 7.28.6
@@ -33,10 +33,10 @@ importers:
         specifier: 7.29.0
         version: 7.29.0(@babel/core@7.29.0)
       '@babel/plugin-transform-class-properties':
-        specifier: ^7.28.6
+        specifier: 7.28.6
         version: 7.28.6(@babel/core@7.29.0)
       '@embroider/addon-dev':
-        specifier: ^8.1.0
+        specifier: 8.1.0
         version: 8.1.0(rollup@4.60.1)
       '@eslint/js':
         specifier: 9.39.4
@@ -45,7 +45,7 @@ importers:
         specifier: 8.0.1
         version: 8.0.1(release-it@17.11.0(typescript@6.0.2))
       '@rollup/plugin-babel':
-        specifier: ^7.0.0
+        specifier: 7.0.0
         version: 7.0.0(@babel/core@7.29.0)(rollup@4.60.1)
       concurrently:
         specifier: 9.2.1
@@ -84,7 +84,7 @@ importers:
         specifier: 17.11.0
         version: 17.11.0(typescript@6.0.2)
       rollup:
-        specifier: ^4.60.1
+        specifier: 4.60.1
         version: 4.60.1
       stylelint:
         specifier: 16.26.1
@@ -99,7 +99,7 @@ importers:
   test-app:
     devDependencies:
       '@babel/core':
-        specifier: ^7.26.7
+        specifier: 7.29.0
         version: 7.29.0
       '@babel/eslint-parser':
         specifier: 7.28.6
@@ -132,7 +132,7 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       ember-auto-import:
-        specifier: ^2.10.0
+        specifier: 2.13.1
         version: 2.13.1(webpack@5.105.4)
       ember-autoresize-modifier:
         specifier: 0.8.0
@@ -141,7 +141,7 @@ importers:
         specifier: 6.9.1
         version: 6.9.1(@types/node@25.5.2)(handlebars@4.7.9)(underscore@1.13.8)
       ember-cli-babel:
-        specifier: ^8.2.0
+        specifier: 8.3.1
         version: 8.3.1(@babel/core@7.29.0)
       ember-cli-clean-css:
         specifier: 3.0.0
@@ -150,7 +150,7 @@ importers:
         specifier: 3.3.3
         version: 3.3.3(ember-cli@6.9.1(@types/node@25.5.2)(handlebars@4.7.9)(underscore@1.13.8))
       ember-cli-htmlbars:
-        specifier: ^7.0.0
+        specifier: 7.0.1
         version: 7.0.1(@babel/core@7.29.0)(ember-source@6.11.1(@glimmer/component@2.0.0)(rsvp@4.8.5))
       ember-cli-inject-live-reload:
         specifier: 2.1.0
