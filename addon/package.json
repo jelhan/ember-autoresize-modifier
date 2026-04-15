@@ -52,7 +52,7 @@
     "eslint-plugin-n": "17.24.0",
     "eslint-plugin-prettier": "5.5.5",
     "globals": "17.4.0",
-    "prettier": "3.8.1",
+    "prettier": "3.8.3",
     "prettier-plugin-ember-template-tag": "2.1.3",
     "rollup": "4.60.1",
     "stylelint": "17.6.0",
