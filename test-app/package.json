@@ -64,7 +64,7 @@
     "stylelint": "17.8.0",
     "stylelint-config-standard": "40.0.0",
     "stylelint-prettier": "5.0.3",
-    "webpack": "5.105.4"
+    "webpack": "5.106.2"
   },
   "engines": {
     "node": "18.* || >= 20"
