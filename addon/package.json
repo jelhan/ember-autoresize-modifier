@@ -55,7 +55,7 @@
     "prettier": "3.8.3",
     "prettier-plugin-ember-template-tag": "2.1.4",
     "rollup": "4.60.1",
-    "stylelint": "17.6.0",
+    "stylelint": "17.8.0",
     "stylelint-config-standard": "40.0.0",
     "stylelint-prettier": "5.0.3"
   },
