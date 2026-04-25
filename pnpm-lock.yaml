@@ -64,8 +64,8 @@ importers:
         specifier: 10.1.8
         version: 10.1.8(eslint@9.39.4)
       eslint-plugin-ember:
-        specifier: 13.1.0
-        version: 13.1.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(eslint@9.39.4)(typescript@6.0.3)
+        specifier: 13.1.1
+        version: 13.1.1(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(eslint@9.39.4)(typescript@6.0.3)
       eslint-plugin-n:
         specifier: 17.24.0
         version: 17.24.0(eslint@9.39.4)(typescript@6.0.3)
@@ -193,8 +193,8 @@ importers:
         specifier: 10.1.8
         version: 10.1.8(eslint@9.39.4)
       eslint-plugin-ember:
-        specifier: 13.1.0
-        version: 13.1.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(eslint@9.39.4)(typescript@6.0.3)
+        specifier: 13.1.1
+        version: 13.1.1(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(eslint@9.39.4)(typescript@6.0.3)
       eslint-plugin-n:
         specifier: 17.24.0
         version: 17.24.0(eslint@9.39.4)(typescript@6.0.3)
@@ -2947,8 +2947,8 @@ packages:
     engines: {node: '>= 20.19.0'}
     hasBin: true
 
-  ember-eslint-parser@0.10.0:
-    resolution: {integrity: sha512-oq37TDYDBqR4fTGhJy/Yecw5VHlPJrSCd26KkwCKlhzAHMCzac+/HSln99COihKei2mMaaob17IrV3I9XL83YQ==}
+  ember-eslint-parser@0.11.0:
+    resolution: {integrity: sha512-c/Rin7rfkb/auLp8oclVamHbMtGx/uKUfK9Aggpk97u8kaLm/5e4kCDSPaFrn9AQ4P+jnBiTw/Mr0nT9oR72Ug==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       '@typescript-eslint/parser': '*'
@@ -2956,8 +2956,8 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  ember-estree@0.4.3:
-    resolution: {integrity: sha512-742Wp/Dx2g9IZFOd9+JaRTpyflptxhtdMaG7MA2nl8lZOM9zTzlD+FfT3Vx/o+CZX976ZGDBbKg/gr5WErfqxA==}
+  ember-estree@0.6.2:
+    resolution: {integrity: sha512-CeKa6FZ95jp6de+vjhmv2XmOGBB2V95iiH7RqI2av1nU0m1XhFZEG8npoEciklQqPEzFO5OXS41b0mGvXBsJCA==}
 
   ember-load-initializers@3.0.1:
     resolution: {integrity: sha512-qV3vxJKw5+7TVDdtdLPy8PhVsh58MlK8jwzqh5xeOwJPNP7o0+BlhvwoIlLYTPzGaHdfjEIFCgVSyMRGd74E1g==}
@@ -3140,8 +3140,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-ember@13.1.0:
-    resolution: {integrity: sha512-38DVNSpQfnyG0y7TlyFMaPjlB44faruQ1YhQvizfUUPHkccJQ6UeBj08CMV5HTrweJ57+19alZfWwwdloL01kQ==}
+  eslint-plugin-ember@13.1.1:
+    resolution: {integrity: sha512-tB2HyXqe0Eq5S/u4m6xwx8baEUUdXE/s4MRJEGeDqnj5CKH6YG4RuDYSXEarKGzhW+VVWLqjMmuhTp8Ch25zaQ==}
     engines: {node: '>= 20.19'}
     peerDependencies:
       '@typescript-eslint/parser': '*'
@@ -6260,9 +6260,6 @@ packages:
   yoctocolors@2.1.2:
     resolution: {integrity: sha512-CzhO+pFNo8ajLM2d2IW/R93ipy99LWjtwblvC1RsoSUMZgyLbYFr221TnSNT7GjGdYui6P459mw9JH/g/zW2ug==}
     engines: {node: '>=18'}
-
-  zimmerframe@1.1.4:
-    resolution: {integrity: sha512-B58NGBEoc8Y9MWWCQGl/gq9xBCe4IiKM0a2x7GZdQKOW5Exr8S1W24J6OgM1njK8xCRGvAJIL/MxXHf6SkmQKQ==}
 
 snapshots:
 
@@ -9549,12 +9546,12 @@ snapshots:
       - walrus
       - whiskers
 
-  ember-eslint-parser@0.10.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(typescript@6.0.3):
+  ember-eslint-parser@0.11.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(typescript@6.0.3):
     dependencies:
       '@glimmer/syntax': 0.95.0
       '@typescript-eslint/tsconfig-utils': 8.58.2(typescript@6.0.3)
       content-tag: 4.1.1
-      ember-estree: 0.4.3(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)
+      ember-estree: 0.6.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)
       eslint-scope: 9.1.2
       html-tags: 5.1.0
       mathml-tag-names: 4.0.0
@@ -9564,13 +9561,12 @@ snapshots:
       - '@emnapi/runtime'
       - typescript
 
-  ember-estree@0.4.3(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0):
+  ember-estree@0.6.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0):
     dependencies:
       '@glimmer/env': 0.1.7
       '@glimmer/syntax': 0.95.0
       content-tag: 4.1.1
       oxc-parser: 0.119.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)
-      zimmerframe: 1.1.4
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
@@ -9857,13 +9853,13 @@ snapshots:
     dependencies:
       eslint: 9.39.4
 
-  eslint-plugin-ember@13.1.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(eslint@9.39.4)(typescript@6.0.3):
+  eslint-plugin-ember@13.1.1(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(eslint@9.39.4)(typescript@6.0.3):
     dependencies:
       '@ember-data/rfc395-data': 0.0.4
       aria-query: 5.3.2
       css-tree: 3.2.1
       editorconfig: 3.0.2
-      ember-eslint-parser: 0.10.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(typescript@6.0.3)
+      ember-eslint-parser: 0.11.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(typescript@6.0.3)
       ember-rfc176-data: 0.3.18
       eslint: 9.39.4
       eslint-utils: 3.0.0(eslint@9.39.4)
@@ -13409,5 +13405,3 @@ snapshots:
   yocto-queue@1.2.2: {}
 
   yoctocolors@2.1.2: {}
-
-  zimmerframe@1.1.4: {}
