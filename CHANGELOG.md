@@ -1,5 +1,10 @@
 # Changelog
 
+
+
+
+
+
 ## Release (2026-04-06)
 
 * ember-autoresize-modifier 0.10.0 (minor)
